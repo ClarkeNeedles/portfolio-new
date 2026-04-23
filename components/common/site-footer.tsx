@@ -23,7 +23,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
                 "h-10 w-10 p-2"
               )}
             >
-              <item.icon className="h-5 w-5" />
+              {item.icon && <item.icon className="h-5 w-5" />}
             </Link>
           </CustomTooltip>
         ))}

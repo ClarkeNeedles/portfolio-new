@@ -46,31 +46,12 @@ export const pagesConfig: PagesConfig = {
       description: "Contact Naman Barkiya.",
     },
   },
-  contributions: {
-    title: "Contributions",
-    description: "Open-source contributions and community involvement.",
-    metadata: {
-      title: "Contributions",
-      description:
-        "Naman Barkiya's open-source contributions and community involvement.",
-    },
-  },
   resume: {
     title: "Resume",
     description: "Naman Barkiya's resume.",
     metadata: {
       title: "Resume",
       description: "Naman Barkiya's resume.",
-    },
-  },
-  blogs: {
-    title: "Blogs",
-    description:
-      "Thoughts on AI, software engineering, and building in public.",
-    metadata: {
-      title: "Blogs",
-      description:
-        "Naman Barkiya's blog — thoughts on AI, software engineering, and building in public.",
     },
   },
   experience: {
