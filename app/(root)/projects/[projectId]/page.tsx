@@ -41,10 +41,10 @@ export default async function Project({ params }: ProjectPageProps) {
       </Link>
       <div>
         <time
-          dateTime={Date.now().toString()}
+          dateTime={new Date(project.endDate).toISOString()}
           className="block text-sm text-muted-foreground"
         >
-          {formatDateFromObj(project.startDate)}
+          {formatDateFromObj(project.endDate)}
         </time>
         <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
           {project.companyName}
@@ -80,7 +80,7 @@ export default async function Project({ params }: ProjectPageProps) {
             />
 
             <div className="flex-1 text-left leading-tight">
-              <p className="font-medium">{"Naman Barkiya"}</p>
+              <p className="font-medium">{"Clarke Needles"}</p>
               <p className="text-[12px] text-muted-foreground">
                 @{siteConfig.username}
               </p>

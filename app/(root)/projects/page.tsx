@@ -15,8 +15,8 @@ const renderContent = (tabVal: string) => {
   let projectArr = Projects;
   if (tabVal === "personal") {
     projectArr = projectArr.filter((val) => val.type === "Personal");
-  } else if (tabVal === "professional") {
-    projectArr = projectArr.filter((val) => val.type === "Professional");
+  } else if (tabVal === "team") {
+    projectArr = projectArr.filter((val) => val.type === "Team");
   }
 
   return (
@@ -41,9 +41,9 @@ export default function ProjectsPage() {
       content: renderContent("personal"),
     },
     {
-      value: "professional",
-      label: "Professional",
-      content: renderContent("professional"),
+      value: "team",
+      label: "Team",
+      content: renderContent("team"),
     },
   ];
 
