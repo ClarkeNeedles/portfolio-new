@@ -19,7 +19,7 @@ export const experiences: ExperienceInterface[] = [
     id: "fujifilm_QA",
     position: "Quality Assurance Engineering Intern",
     company: "FUJIFILM VisualSonics",
-    location: "Toronto, Canada",
+    location: "Toronto, ON",
     startDate: new Date("2024-05-01T12:00:00"),
     endDate: new Date("2024-08-31T12:00:00"),
     description: [
