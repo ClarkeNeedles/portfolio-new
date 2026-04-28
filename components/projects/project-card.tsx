@@ -22,10 +22,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         />
       </div>
       <div className="pt-5 space-y-3 flex flex-col flex-grow">
-        <h5 className="text-2xl font-bold tracking-tight text-foreground">
+        <h5 className="text-2xl font-bold tracking-tight text-foreground lowercase">
           {project.companyName}
         </h5>
-        <p className="line-clamp-3 font-normal text-muted-foreground flex-grow">
+        <p className="line-clamp-3 font-normal text-muted-foreground flex-grow lowercase">
           {project.shortDescription}
         </p>
         <div className="flex gap-2 flex-wrap">
@@ -33,8 +33,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <Link href={`/projects/${project.id}`} className="mt-auto">
           <Button variant={"default"} className="mt-2 w-full sm:w-auto">
-            Read more
-            <Icons.chevronRight className="w-4 ml-1" />
+            {"> read_more"}
           </Button>
         </Link>
       </div>

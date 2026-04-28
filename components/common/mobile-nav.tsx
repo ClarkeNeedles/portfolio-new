@@ -1,4 +1,4 @@
-import { Norican } from "next/font/google";
+import { Press_Start_2P } from "next/font/google";
 import Link from "next/link";
 import * as React from "react";
 
@@ -11,12 +11,7 @@ interface MobileNavProps {
   children?: React.ReactNode;
 }
 
-const norican = Norican({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
+const pressStart2P = Press_Start_2P({weight: "400", subsets: ["latin"], variable: "--font-press-start-2p"});
 
 export function MobileNav({ items, children }: MobileNavProps) {
   useLockBody();
@@ -29,7 +24,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
     >
       <div className="relative z-20 grid gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md">
         <Link href="/" className="flex items-center space-x-2">
-          <span className={cn(norican.className, "text-2xl")}>
+          <span className={cn(pressStart2P.className, "text-sm")}>
             {siteConfig.authorName}
           </span>
         </Link>
@@ -39,7 +34,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-                "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
+                "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline lowercase",
                 item.disabled && "cursor-not-allowed opacity-60"
               )}
             >

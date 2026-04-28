@@ -100,7 +100,7 @@ export default function IndexPage() {
                 className={cn(buttonVariants({ size: "lg" }))}
                 aria-label="View resume"
               >
-                <Icons.post className="w-4 h-4 mr-2" /> Resume
+                <Icons.post className="w-4 h-4 mr-2" /> resume
               </Link>
             </AnimatedText>
             <AnimatedText delay={0.8}>
@@ -115,7 +115,7 @@ export default function IndexPage() {
                 )}
                 aria-label="Contact Clarke Needles"
               >
-                <Icons.contact className="w-4 h-4 mr-2" /> Contact
+                <Icons.contact className="w-4 h-4 mr-2" /> contact
               </Link>
             </AnimatedText>
           </div>
@@ -161,7 +161,7 @@ export default function IndexPage() {
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/projects">
             <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
+              <Icons.chevronDown className="mr-2 h-4 w-4" /> view all
             </Button>
           </Link>
         </AnimatedText>
@@ -200,7 +200,7 @@ export default function IndexPage() {
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/experience">
             <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
+              <Icons.chevronDown className="mr-2 h-4 w-4" /> view all
             </Button>
           </Link>
         </AnimatedText>
@@ -229,7 +229,7 @@ export default function IndexPage() {
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/skills">
             <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
+              <Icons.chevronDown className="mr-2 h-4 w-4" /> view all
             </Button>
           </Link>
         </AnimatedText>

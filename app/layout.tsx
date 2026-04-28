@@ -1,7 +1,6 @@
 import "./globals.css";
 
-import { Inter as FontSans } from "next/font/google";
-import localFont from "next/font/local";
+import { JetBrains_Mono } from "next/font/google";
 
 import { ThemeProvider } from "@/components/common/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
@@ -9,15 +8,9 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { ModalProvider } from "@/providers/modal-provider";
 
-const fontSans = FontSans({
+const fontMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-// Font files can be colocated inside of `pages`
-const fontHeading = localFont({
-  src: "../assets/fonts/CalSans-SemiBold.woff2",
-  variable: "--font-heading",
+  variable: "--font-mono",
 });
 
 interface RootLayoutProps {
@@ -97,22 +90,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
-          fontHeading.variable
+          fontMono.variable
         )}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           themes={[
             "light",
             "dark",
-            "retro",
-            "cyberpunk",
-            "paper",
-            "aurora",
-            "synthwave",
           ]}
         >
           {children}

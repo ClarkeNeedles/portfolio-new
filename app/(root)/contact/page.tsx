@@ -15,11 +15,9 @@ export default function ContactPage() {
       title={pagesConfig.contact.title}
       description={pagesConfig.contact.description}
     >
-      <div className="flex flex-col lg:flex-row">
-        <div className="flex-1">
+      <div className="flex justify-center">
+        <div className="w-full max-w-xl">
           <ContactForm />
-        </div>
-        <div className="flex-1 flex justify-end">
         </div>
       </div>
     </PageContainer>

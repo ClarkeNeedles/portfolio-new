@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Norican } from "next/font/google";
+import { Press_Start_2P } from "next/font/google";
 import Link from "next/link";
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 import * as React from "react";
@@ -16,12 +16,7 @@ interface MainNavProps {
   children?: React.ReactNode;
 }
 
-const norican = Norican({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
+const pressStart2P = Press_Start_2P({weight: "400", subsets: ["latin"], variable: "--font-press-start-2p"});
 
 // Animation variants for the navigation items
 const navItemVariants = {
@@ -54,7 +49,7 @@ export function MainNav({ items, children }: MainNavProps) {
         transition={{ duration: 0.5 }}
       >
         <Link href="/" className="hidden items-center space-x-2 md:flex">
-          <span className={cn(norican.className, "text-2xl")}>
+          <span className={cn(pressStart2P.className, "text-sm")}>
             {siteConfig.authorName}
           </span>
         </Link>
@@ -74,7 +69,7 @@ export function MainNav({ items, children }: MainNavProps) {
               <Link
                 href={item.disabled ? "#" : item.href}
                 className={cn(
-                  "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
+                  "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm lowercase",
                   item.href.startsWith(`/${segment}`)
                     ? "text-foreground"
                     : "text-foreground/60",

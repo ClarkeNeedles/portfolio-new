@@ -31,8 +31,8 @@ export const pagesConfig: PagesConfig = {
     },
   },
   projects: {
-    title: "Projects",
-    description: "Showcasing impactful projects and technical achievements.",
+    title: "$ ls projects/",
+    description: "> showcasing impactful projects and technical achievements.",
     metadata: {
       title: "Projects",
       description: "Clarke Needles' projects in building web applications.",

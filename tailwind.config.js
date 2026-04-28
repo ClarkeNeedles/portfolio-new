@@ -54,8 +54,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-        heading: ["var(--font-heading)", ...fontFamily.sans],
+        mono: ["var(--font-mono)", "monospace"],
+        sans: ["var(--font-mono)", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -81,14 +81,5 @@ module.exports = {
   plugins: [require("tailwindcss-animate")],
   safelist: [
     "dark",
-    "retro",
-    "cyberpunk",
-    "paper",
-    "aurora",
-    "synthwave",
-    {
-      pattern:
-        /^(.*?)(dark|retro|cyberpunk|paper|aurora|synthwave)([:.])(.*?)$/,
-    },
   ],
 };
