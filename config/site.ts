@@ -3,7 +3,7 @@ export const siteConfig = {
   authorName: "Clarke Needles",
   username: "ClarkeNeedles",
   description:
-    "Clarke Needles - Computer Engineer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions in software development and AI.",
+    "Clarke Needles - Computer Engineer ...",
   url: "https://clarkeneedles.com",
   links: {
     twitter: "https://x.com/namanbarkiya",

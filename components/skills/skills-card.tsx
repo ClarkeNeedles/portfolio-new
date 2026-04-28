@@ -1,4 +1,3 @@
-import Rating from "@/components/skills/rating";
 import { skillsInterface } from "@/config/skills";
 
 interface SkillsCardProps {
@@ -20,7 +19,20 @@ export default function SkillsCard({ skills }: SkillsCardProps) {
               <p className="text-sm text-muted-foreground">
                 {skill.description}
               </p>
-              <Rating stars={skill.rating} />
+              {skill.projects && skill.projects.length > 0 && (
+                <div className="flex flex-wrap gap-2 pt-2">
+                  <p className="text-xs text-muted-foreground">Used in:</p>
+                  {skill.projects.map((project) => (
+                    <a
+                      key={project.name}
+                      href={project.href}
+                      className="text-xs underline hover:text-primary"
+                    >
+                      {project.name}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
