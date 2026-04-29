@@ -13,7 +13,6 @@ export default function ContactPage() {
   return (
     <PageContainer
       title={pagesConfig.contact.title}
-      description={pagesConfig.contact.description}
     >
       <div className="flex justify-center">
         <div className="w-full max-w-xl">

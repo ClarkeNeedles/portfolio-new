@@ -15,13 +15,13 @@ export default function SkillsCard({ skills }: SkillsCardProps) {
           <div className="flex h-[230px] flex-col justify-between rounded-md p-6 sm:h-[230px]">
             <skill.icon size={50} />
             <div className="space-y-2">
-              <h3 className="font-bold">{skill.name}</h3>
-              <p className="text-sm text-muted-foreground">
-                {skill.description}
+              <h3 className="font-bold lowercase">{"$ " + skill.name}</h3>
+              <p className="text-sm text-muted-foreground lowercase">
+                {"> " + skill.description}
               </p>
               {skill.projects && skill.projects.length > 0 && (
                 <div className="flex flex-wrap gap-2 pt-2">
-                  <p className="text-xs text-muted-foreground">Used in:</p>
+                  <p className="text-xs text-muted-foreground lowercase">{"> Used in:"}</p>
                   {skill.projects.map((project) => (
                     <a
                       key={project.name}

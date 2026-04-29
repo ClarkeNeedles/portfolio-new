@@ -48,7 +48,7 @@ export function MainNav({ items, children }: MainNavProps) {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <Link href="/" className="hidden items-center space-x-2 md:flex">
+        <Link href="/" className="hidden items-center space-x-2 md:flex lowercase">
           <span className={cn(pressStart2P.className, "text-sm")}>
             {siteConfig.authorName}
           </span>

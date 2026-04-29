@@ -10,7 +10,7 @@ import CustomTooltip from "@/components/ui/custom-tooltip";
 import { Projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
 import { cn, formatDateFromObj } from "@/lib/utils";
-import profileImg from "@/public/profile-img.jpg";
+import profileImg from "@/public/profile-img.png";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -36,8 +36,7 @@ export default async function Project({ params }: ProjectPageProps) {
           "absolute left-[-200px] top-14 hidden xl:inline-flex"
         )}
       >
-        <Icons.chevronLeft className="mr-2 h-4 w-4" />
-        All Projects
+        {"< all_projects"}
       </Link>
       <div>
         <time
@@ -47,7 +46,7 @@ export default async function Project({ params }: ProjectPageProps) {
           {formatDateFromObj(project.endDate)}
         </time>
         <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
-          {project.companyName}
+          {"$ " + project.companyName}
           <div className="flex items-center">
             {project.githubLink && (
               <CustomTooltip text="Link to the source code.">
@@ -100,57 +99,27 @@ export default async function Project({ params }: ProjectPageProps) {
 
       <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
-          Tech Stack
+          $ tech_stack
         </h2>
         <ChipContainer textArr={project.techStack} />
       </div>
 
-      <div className="mb-7 ">
+      <div className="mb-7 lowercase">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
-          Description
+          $ description
         </h2>
-        {/* {<project.descriptionComponent />} */}
         <ProjectDescription
           paragraphs={project.descriptionDetails.paragraphs}
           bullets={project.descriptionDetails.bullets}
         />
       </div>
-
-      <div className="mb-7 ">
-        <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
-          Page Info
-        </h2>
-        {project.pagesInfoArr.map((page, ind) => (
-          <div key={ind}>
-            <h3 className="flex items-center font-heading text-xl leading-tight lg:text-xl mt-3">
-              <Icons.star className="h-5 w-5 mr-2" /> {page.title}
-            </h3>
-            <div>
-              <p>{page.description}</p>
-              {page.imgArr.map((img, ind) => (
-                <Image
-                  src={img}
-                  key={ind}
-                  alt={img}
-                  width={720}
-                  height={405}
-                  className="my-4 rounded-md border bg-muted transition-colors"
-                  priority
-                />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-
       <hr className="mt-12" />
       <div className="flex justify-center py-6 lg:py-10">
         <Link
           href="/projects"
           className={cn(buttonVariants({ variant: "ghost" }))}
         >
-          <Icons.chevronLeft className="mr-2 h-4 w-4" />
-          All Projects
+          $ all_projects
         </Link>
       </div>
     </article>

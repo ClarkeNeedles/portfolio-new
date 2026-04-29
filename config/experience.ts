@@ -17,7 +17,7 @@ export interface ExperienceInterface {
 export const experiences: ExperienceInterface[] = [
   {
     id: "fujifilm_QA",
-    position: "Quality Assurance Engineering Intern",
+    position: "QA_Engineering_Intern",
     company: "FUJIFILM VisualSonics",
     location: "Toronto, ON",
     startDate: new Date("2024-05-01T12:00:00"),

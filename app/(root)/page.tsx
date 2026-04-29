@@ -16,7 +16,7 @@ import { featuredProjects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
 import { featuredSkills } from "@/config/skills";
 import { cn } from "@/lib/utils";
-import profileImg from "@/public/profile-img.jpg";
+import profileImg from "@/public/profile-img.png";
 
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
@@ -68,26 +68,26 @@ export default function IndexPage() {
             height={100}
             width={100}
             sizes="100vw"
-            className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary"
+            className="bg-secondary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary"
             alt="Clarke Needles - Computer Engineer Portfolio"
             priority
           />
           <AnimatedText
             as="h1"
             delay={0.2}
-            className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
+            className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Clarke Needles
+            {"$ whoami"}
           </AnimatedText>
           <AnimatedText
             as="h3"
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Computer Engineer
+            {"> clarke needles - computer engineer"}
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
-            <p className="leading-normal text-muted-foreground text-sm sm:text-base">
+            <p className="leading-normal text-muted-foreground text-sm sm:text-base lowercase">
               Computer Engineer working with ...
             </p>
           </div>
@@ -132,16 +132,9 @@ export default function IndexPage() {
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <AnimatedText
             as="h2"
-            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+            className="font-heading text-2xl leading-[1.1] sm:text-2xl md:text-5xl"
           >
             {pagesConfig.projects.title}
-          </AnimatedText>
-          <AnimatedText
-            as="p"
-            delay={0.2}
-            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
-          >
-            {pagesConfig.projects.description}
           </AnimatedText>
         </div>
         <div className="w-full">
@@ -160,8 +153,8 @@ export default function IndexPage() {
         </div>
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/projects">
-            <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> view all
+            <Button variant={"outline"} className="rounded-none">
+              <Icons.chevronDown className="mr-2 h-4 w-4" /> view_all
             </Button>
           </Link>
         </AnimatedText>
@@ -174,16 +167,9 @@ export default function IndexPage() {
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <AnimatedText
             as="h2"
-            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+            className="font-heading text-2xl leading-[1.1] sm:text-2xl md:text-5xl"
           >
             {pagesConfig.experience.title}
-          </AnimatedText>
-          <AnimatedText
-            as="p"
-            delay={0.2}
-            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
-          >
-            {pagesConfig.experience.description}
           </AnimatedText>
         </div>
         <div className="mx-auto grid justify-center gap-4 md:w-full lg:grid-cols-3">
@@ -199,8 +185,8 @@ export default function IndexPage() {
         </div>
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/experience">
-            <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> view all
+            <Button variant={"outline"} className="rounded-none">
+              <Icons.chevronDown className="mr-2 h-4 w-4" /> view_all
             </Button>
           </Link>
         </AnimatedText>
@@ -213,23 +199,16 @@ export default function IndexPage() {
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <AnimatedText
             as="h2"
-            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+            className="font-heading text-2xl leading-[1.1] sm:text-2xl md:text-5xl"
           >
             {pagesConfig.skills.title}
-          </AnimatedText>
-          <AnimatedText
-            as="p"
-            delay={0.2}
-            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
-          >
-            {pagesConfig.skills.description}
           </AnimatedText>
         </div>
         <SkillsCard skills={featuredSkills} />
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/skills">
-            <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> view all
+            <Button variant={"outline"} className="rounded-none">
+              <Icons.chevronDown className="mr-2 h-4 w-4" /> view_all
             </Button>
           </Link>
         </AnimatedText>

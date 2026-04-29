@@ -49,7 +49,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
           <div className="flex flex-col gap-1 sm:gap-2">
             <div className="flex items-start sm:items-center gap-2">
               <h3 className="text-base sm:text-lg font-bold text-foreground line-clamp-2 sm:line-clamp-1">
-                {experience.position}
+                {"$ " + experience.position}
               </h3>
               {experience.companyUrl && (
                 <a
@@ -73,8 +73,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
               </span>
             </div>
           </div>
-          <p className="mt-2 sm:mt-3 text-sm text-muted-foreground line-clamp-2">
-            {experience.description[0]}
+          <p className="mt-2 sm:mt-3 text-sm text-muted-foreground line-clamp-2 lowercase">
+            {"> " + experience.description[0]}
           </p>
           <div className="mt-3 sm:mt-4 flex flex-wrap gap-1">
             {experience.skills.slice(0, 2).map((skill, index) => (
@@ -101,8 +101,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
           asChild
         >
           <Link href={`/experience/${experience.id}`}>
-            View Details
-            <Icons.chevronRight className="ml-2 h-4 w-4" />
+            $ view_details
           </Link>
         </Button>
       </div>

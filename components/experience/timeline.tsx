@@ -64,7 +64,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
                     <h3 className="text-lg sm:text-xl font-bold text-foreground">
-                      {experience.position}
+                      {"$ " + experience.position}
                     </h3>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-primary/10 text-primary border border-primary/20 w-fit">
                       {getDurationText(
@@ -92,7 +92,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                     {experience.location}
                   </p>
                   <p className="text-sm text-muted-foreground line-clamp-2">
-                    {experience.description[0]}
+                    {"> " + experience.description[0]}
                   </p>
                 </div>
               </div>
@@ -103,8 +103,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                 asChild
               >
                 <Link href={`/experience/${experience.id}`}>
-                  View Details
-                  <Icons.chevronRight className="ml-2 h-4 w-4" />
+                  {"$ view_details"}
                 </Link>
               </Button>
             </div>

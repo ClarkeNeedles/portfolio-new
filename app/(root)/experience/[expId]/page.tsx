@@ -71,14 +71,14 @@ export default async function ExperienceDetailPage({
   const tabItems = [
     {
       value: "summary",
-      label: "Summary",
+      label: "summary",
       content: (
         <AnimatedSection delay={0.3}>
           <div>
             <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              Role Summary
+              {"> Role Summary"}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 lowercase">
               {experience.description.map((desc, idx) => (
                 <li
                   key={idx}
@@ -95,14 +95,14 @@ export default async function ExperienceDetailPage({
     },
     {
       value: "achievements",
-      label: "Achievements",
+      label: "achievements",
       content: (
         <AnimatedSection delay={0.3}>
           <div>
             <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              Key Achievements
+              {"> Key Achievements"}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 lowercase">
               {experience.achievements.map((achievement, idx) => (
                 <li
                   key={idx}
@@ -119,12 +119,12 @@ export default async function ExperienceDetailPage({
     },
     {
       value: "skills",
-      label: "Skills",
+      label: "skills",
       content: (
         <AnimatedSection delay={0.3}>
           <div>
             <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              Technologies & Skills
+              {"> Technologies & Skills"}
             </h3>
             <ChipContainer textArr={experience.skills} />
             <p className="mt-4 text-sm text-muted-foreground">
@@ -143,8 +143,7 @@ export default async function ExperienceDetailPage({
         <AnimatedSection className="mb-6">
           <Button variant="ghost" size="sm" className="mb-4" asChild>
             <Link href="/experience">
-              <Icons.chevronLeft className="mr-2 h-4 w-4" />
-              Back to Experience
+              {"< back_to_experiences"}
             </Link>
           </Button>
         </AnimatedSection>
@@ -168,7 +167,7 @@ export default async function ExperienceDetailPage({
                     )}
                     <div className="flex-1 text-center sm:text-left">
                       <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-                        {experience.position}
+                        {"$ " + experience.position}
                       </h1>
                       <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
                         <span className="text-md font-medium text-muted-foreground">
@@ -211,8 +210,7 @@ export default async function ExperienceDetailPage({
         <AnimatedSection delay={0.4} className="flex justify-center mt-8">
           <Button variant="outline" asChild>
             <Link href="/experience">
-              <Icons.chevronLeft className="mr-2 h-4 w-4" />
-              View All Experience
+              $ view_all_experiences
             </Link>
           </Button>
         </AnimatedSection>

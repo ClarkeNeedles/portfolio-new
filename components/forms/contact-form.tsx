@@ -81,13 +81,10 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>{"$ name"}</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your name" {...field} />
+                <Input placeholder="> enter your name" {...field} />
               </FormControl>
-              {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
               <FormMessage />
             </FormItem>
           )}
@@ -97,9 +94,9 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>{"$ email"}</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your email" {...field} />
+                <Input placeholder="> enter your email" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -110,15 +107,15 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>{"$ message"}</FormLabel>
               <FormControl>
-                <Textarea placeholder="Enter your message" {...field} />
+                <Textarea placeholder="> enter your message" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">{"$ submit"}</Button>
       </form>
     </Form>
   );
