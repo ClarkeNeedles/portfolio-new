@@ -1,28 +1,28 @@
-"use client";
+"use client"
 
-import { ChevronDown } from "lucide-react";
-import * as React from "react";
+import { ChevronDown } from "lucide-react"
+import * as React from "react"
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { cn } from "@/lib/utils";
+} from "@/components/ui/dropdown-menu"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { cn } from "@/lib/utils"
 
 interface TabItem {
-  value: string;
-  label: string;
-  content: React.ReactNode;
+  value: string
+  label: string
+  content: React.ReactNode
 }
 
 interface ResponsiveTabsProps {
-  items: TabItem[];
-  defaultValue?: string;
-  className?: string;
+  items: TabItem[]
+  defaultValue?: string
+  className?: string
 }
 
 export function ResponsiveTabs({
@@ -32,8 +32,8 @@ export function ResponsiveTabs({
 }: ResponsiveTabsProps) {
   const [activeTab, setActiveTab] = React.useState(
     defaultValue || items[0]?.value
-  );
-  const activeItem = items.find((item) => item.value === activeTab);
+  )
+  const activeItem = items.find((item) => item.value === activeTab)
 
   return (
     <div className={cn("w-full", className)}>
@@ -84,5 +84,5 @@ export function ResponsiveTabs({
       {/* Mobile: Content */}
       <div className="md:hidden">{activeItem?.content}</div>
     </div>
-  );
+  )
 }

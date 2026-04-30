@@ -1,24 +1,21 @@
-import React from "react";
-import { ClientPageWrapper } from "./client-page-wrapper";
-import PageHeader from "./page-header";
+import React from "react"
+import { ClientPageWrapper } from "./client-page-wrapper"
+import PageHeader from "./page-header"
 
 interface PageContainerProps {
-  title: string;
-  children: React.ReactNode;
+  title: string
+  children: React.ReactNode
 }
 
-export default function PageContainer({
-  title,
-  children,
-}: PageContainerProps) {
+export default function PageContainer({ title, children }: PageContainerProps) {
   return (
     <ClientPageWrapper>
       <div>
-        <PageHeader title={title}/>
+        <PageHeader title={title} />
         <div className="mx-4 sm:mx-6 lg:mx-8 max-w-full overflow-x-hidden">
           {children}
         </div>
       </div>
     </ClientPageWrapper>
-  );
+  )
 }

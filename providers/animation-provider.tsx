@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import { ReactNode } from "react";
+import { ReactNode } from "react"
 
 interface AnimationProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export const AnimationProvider = ({ children }: AnimationProviderProps) => {
-  return <>{children}</>;
-};
+  return <>{children}</>
+}

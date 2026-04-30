@@ -1,14 +1,14 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { motion } from "framer-motion"
+import { ReactNode } from "react"
 
 interface AnimatedSectionProps {
-  children: ReactNode;
-  className?: string;
-  delay?: number;
-  direction?: "up" | "down" | "left" | "right";
-  id?: string;
+  children: ReactNode
+  className?: string
+  delay?: number
+  direction?: "up" | "down" | "left" | "right"
+  id?: string
 }
 
 export const AnimatedSection = ({
@@ -23,9 +23,9 @@ export const AnimatedSection = ({
     down: { y: -50 },
     left: { x: 50 },
     right: { x: -50 },
-  };
+  }
 
-  const initialOffset = directionOffset[direction];
+  const initialOffset = directionOffset[direction]
 
   return (
     <motion.div
@@ -46,5 +46,5 @@ export const AnimatedSection = ({
     >
       {children}
     </motion.div>
-  );
-};
+  )
+}

@@ -1,18 +1,18 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
 
-import { Icons } from "@/components/common/icons";
-import { Button } from "@/components/ui/button";
-import ChipContainer from "@/components/ui/chip-container";
-import { ProjectInterface } from "@/config/projects";
+import { Icons } from "@/components/common/icons"
+import { Button } from "@/components/ui/button"
+import ChipContainer from "@/components/ui/chip-container"
+import { ProjectInterface } from "@/config/projects"
 
 interface ProjectCardProps {
-  project: ProjectInterface;
+  project: ProjectInterface
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="relative p-6 w-full bg-background border border-border rounded-lg h-full flex flex-col gap-4">  
+    <div className="relative p-6 w-full bg-background border border-border rounded-lg h-full flex flex-col gap-4">
       <h5 className="text-2xl font-bold tracking-tight text-foreground">
         {"$ " + project.companyName}
       </h5>
@@ -22,6 +22,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           src={project.companyLogoImg}
           alt="img"
           fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
         />
       </div>
       <div className="flex flex-col flex-grow gap-3">
@@ -45,5 +46,5 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         )}
       </div>
     </div>
-  );
+  )
 }

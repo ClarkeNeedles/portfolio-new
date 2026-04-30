@@ -20,30 +20,25 @@ import {
   Menu,
   Moon,
   MoreVertical,
-  Music,
-  Palette,
   Phone,
   Pizza,
   Plus,
-  Scroll,
   Settings,
-  Sparkles,
   SunMedium,
   Trash,
   User,
   X,
-  Zap,
-} from "lucide-react";
-import { AiFillStar } from "react-icons/ai";
-import { BiLaugh, BiSolidUser } from "react-icons/bi";
-import { BsInfoCircle, BsQuestionCircle } from "react-icons/bs";
+} from "lucide-react"
+import { AiFillStar } from "react-icons/ai"
+import { BiLaugh, BiSolidUser } from "react-icons/bi"
+import { BsInfoCircle, BsQuestionCircle } from "react-icons/bs"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 import {
   HiBriefcase,
   HiOutlineExternalLink,
   HiOutlineLink,
-} from "react-icons/hi";
-import { IoIosGitBranch } from "react-icons/io";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+} from "react-icons/hi"
+import { IoIosGitBranch } from "react-icons/io"
 import {
   SiCss,
   SiGmail,
@@ -54,7 +49,7 @@ import {
   SiReact,
   SiTailwindcss,
   SiTypescript,
-} from "react-icons/si";
+} from "react-icons/si"
 
 export const Icons = {
   contact: Phone,
@@ -130,4 +125,4 @@ export const Icons = {
       </svg>
     </div>
   ),
-};
+}

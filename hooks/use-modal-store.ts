@@ -1,9 +1,9 @@
-import { create } from "zustand";
+import { create } from "zustand"
 
 interface ModalDataProps {
-  title: string;
-  description: string;
-  icon: any;
+  title: string
+  description: string
+  icon: any
   // link?: {
   //     label: string;
   //     link: string;
@@ -11,12 +11,12 @@ interface ModalDataProps {
 }
 
 interface ModalStoreProps {
-  isOpen: boolean;
-  title: string;
-  description: string;
-  icon: any;
-  onOpen: (data: ModalDataProps) => void;
-  onClose: () => void;
+  isOpen: boolean
+  title: string
+  description: string
+  icon: any
+  onOpen: (data: ModalDataProps) => void
+  onClose: () => void
 }
 
 export const useModalStore = create<ModalStoreProps>((set) => ({
@@ -32,4 +32,4 @@ export const useModalStore = create<ModalStoreProps>((set) => ({
       icon: data.icon,
     }),
   onClose: () => set({ isOpen: false }),
-}));
+}))

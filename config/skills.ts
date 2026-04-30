@@ -1,15 +1,15 @@
-import { Icons } from "@/components/common/icons";
+import { Icons } from "@/components/common/icons"
 
 type ProjectLink = {
-  name: string;
-  href: string;
-};
+  name: string
+  href: string
+}
 
 export interface skillsInterface {
-  name: string;
-  description: string;
-  icon: any;
-  projects: ProjectLink[];
+  name: string
+  description: string
+  icon: any
+  projects: ProjectLink[]
 }
 
 export const skills: skillsInterface[] = [
@@ -24,6 +24,6 @@ export const skills: skillsInterface[] = [
       { name: "Project3", href: "/projects/portfolio (ref to project)" },
     ],
   },
-];
+]
 
-export const featuredSkills = skills.slice(0, 6);
+export const featuredSkills = skills.slice(0, 6)

@@ -1,19 +1,19 @@
-"use client";
+"use client"
 
-import React from "react";
+import React from "react"
 
-import { Icons } from "@/components/common/icons";
+import { Icons } from "@/components/common/icons"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/components/ui/tooltip"
 
 interface CustomTooltipProps {
-  children: React.ReactNode;
-  text: string;
-  icon?: any;
+  children: React.ReactNode
+  text: string
+  icon?: any
 }
 
 export default function CustomTooltip({
@@ -21,7 +21,7 @@ export default function CustomTooltip({
   text,
   icon,
 }: CustomTooltipProps) {
-  const IconComponent = icon ? icon : Icons.infoMark;
+  const IconComponent = icon ? icon : Icons.infoMark
   return (
     <TooltipProvider>
       <Tooltip>
@@ -32,5 +32,5 @@ export default function CustomTooltip({
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  );
+  )
 }

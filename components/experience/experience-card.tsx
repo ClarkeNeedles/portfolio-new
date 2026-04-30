@@ -1,33 +1,47 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import Image from "next/image"
+import Link from "next/link"
+import React from "react"
 
-import { Icons } from "@/components/common/icons";
-import { Button } from "@/components/ui/button";
-import { ExperienceInterface } from "@/config/experience";
+import { Icons } from "@/components/common/icons"
+import { Button } from "@/components/ui/button"
+import { ExperienceInterface } from "@/config/experience"
 
 const months = [
-  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-];
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+]
 
 // Helper function to get duration text
 const getDurationText = (
   startDate: Date,
   endDate: Date | "Present"
 ): string => {
-  const startYear = new Date(startDate).getFullYear().toString();
-  const startMonth = new Date(startDate).getMonth();
-  const endString = typeof endDate === "string" ? "Present" : 
-    months[new Date(endDate).getMonth()] + " " + new Date(endDate).getFullYear().toString();
+  const startYear = new Date(startDate).getFullYear().toString()
+  const startMonth = new Date(startDate).getMonth()
+  const endString =
+    typeof endDate === "string"
+      ? "Present"
+      : months[new Date(endDate).getMonth()] +
+        " " +
+        new Date(endDate).getFullYear().toString()
 
-  return `${months[startMonth]} ${startYear} - ${endString}`;
-};
+  return `${months[startMonth]} ${startYear} - ${endString}`
+}
 
 interface ExperienceCardProps {
-  experience: ExperienceInterface;
+  experience: ExperienceInterface
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
@@ -35,13 +49,13 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
     <div className="group relative overflow-hidden rounded-lg border bg-background p-4 sm:p-6 transition-all duration-300">
       <div className="flex items-start gap-3 sm:gap-4">
         {experience.logo && (
-          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border-2 border-border overflow-hidden bg-white flex-shrink-0">
+          <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-lg border-2 border-border overflow-hidden bg-white flex-shrink-0">
             <Image
               src={experience.logo}
               alt={experience.company}
-              width={48}
-              height={48}
-              className="w-full h-full object-contain p-2"
+              fill
+              sizes="(min-width: 640px) 64px, 48px"
+              className="object-cover"
             />
           </div>
         )}
@@ -100,13 +114,11 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
           className="rounded-lg w-full sm:w-auto"
           asChild
         >
-          <Link href={`/experience/${experience.id}`}>
-            $ view_details
-          </Link>
+          <Link href={`/experience/${experience.id}`}>$ view_details</Link>
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ExperienceCard;
+export default ExperienceCard

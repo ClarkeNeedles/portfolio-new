@@ -1,52 +1,66 @@
-import { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { redirect } from "next/navigation";
+import { Metadata } from "next"
+import Image from "next/image"
+import Link from "next/link"
+import { redirect } from "next/navigation"
 
-import { AnimatedSection } from "@/components/common/animated-section";
-import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
-import { Icons } from "@/components/common/icons";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import ChipContainer from "@/components/ui/chip-container";
-import { ResponsiveTabs } from "@/components/ui/responsive-tabs";
-import { experiences } from "@/config/experience";
-import { siteConfig } from "@/config/site";
+import { AnimatedSection } from "@/components/common/animated-section"
+import { ClientPageWrapper } from "@/components/common/client-page-wrapper"
+import { Icons } from "@/components/common/icons"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import ChipContainer from "@/components/ui/chip-container"
+import { ResponsiveTabs } from "@/components/ui/responsive-tabs"
+import { experiences } from "@/config/experience"
+import { siteConfig } from "@/config/site"
 
 interface ExperienceDetailPageProps {
   params: Promise<{
-    expId: string;
-  }>;
+    expId: string
+  }>
 }
 
 const months = [
-  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-];
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+]
 
 // Helper function to get duration text
 const getDurationText = (
   startDate: Date,
   endDate: Date | "Present"
 ): string => {
-  const startYear = new Date(startDate).getFullYear().toString();
-  const startMonth = new Date(startDate).getMonth();
-  const endString = typeof endDate === "string" ? "Present" : 
-    months[new Date(endDate).getMonth()] + " " + new Date(endDate).getFullYear().toString();
+  const startYear = new Date(startDate).getFullYear().toString()
+  const startMonth = new Date(startDate).getMonth()
+  const endString =
+    typeof endDate === "string"
+      ? "Present"
+      : months[new Date(endDate).getMonth()] +
+        " " +
+        new Date(endDate).getFullYear().toString()
 
-  return `${months[startMonth]} ${startYear} - ${endString}`;
-};
+  return `${months[startMonth]} ${startYear} - ${endString}`
+}
 
 export async function generateMetadata({
   params,
 }: ExperienceDetailPageProps): Promise<Metadata> {
-  const { expId } = await params;
-  const experience = experiences.find((c) => c.id === expId);
+  const { expId } = await params
+  const experience = experiences.find((c) => c.id === expId)
 
   if (!experience) {
     return {
       title: "Experience Not Found",
-    };
+    }
   }
 
   return {
@@ -55,17 +69,17 @@ export async function generateMetadata({
     alternates: {
       canonical: `${siteConfig.url}/experience/${expId}`,
     },
-  };
+  }
 }
 
 export default async function ExperienceDetailPage({
   params,
 }: ExperienceDetailPageProps) {
-  const { expId } = await params;
-  const experience = experiences.find((c) => c.id === expId);
+  const { expId } = await params
+  const experience = experiences.find((c) => c.id === expId)
 
   if (!experience) {
-    redirect("/experience");
+    redirect("/experience")
   }
 
   const tabItems = [
@@ -127,24 +141,18 @@ export default async function ExperienceDetailPage({
               {"> Technologies & Skills"}
             </h3>
             <ChipContainer textArr={experience.skills} />
-            <p className="mt-4 text-sm text-muted-foreground">
-              These are the primary technologies and skills utilized during my
-              time at {experience.company}.
-            </p>
           </div>
         </AnimatedSection>
       ),
     },
-  ];
+  ]
 
   return (
     <ClientPageWrapper>
       <div className="container max-w-4xl mx-auto py-8 px-4">
         <AnimatedSection className="mb-6">
           <Button variant="ghost" size="sm" className="mb-4" asChild>
-            <Link href="/experience">
-              {"< back_to_experiences"}
-            </Link>
+            <Link href="/experience">{"< back_to_experiences"}</Link>
           </Button>
         </AnimatedSection>
 
@@ -155,13 +163,13 @@ export default async function ExperienceDetailPage({
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
                     {experience.logo && (
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg border-2 border-border overflow-hidden bg-white flex-shrink-0">
+                      <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-lg border-2 border-border overflow-hidden bg-white flex-shrink-0">
                         <Image
                           src={experience.logo}
                           alt={experience.company}
-                          width={80}
-                          height={80}
-                          className="w-full h-full object-contain p-2"
+                          fill
+                          sizes="(min-width: 640px) 64px, 48px"
+                          className="object-cover"
                         />
                       </div>
                     )}
@@ -210,12 +218,10 @@ export default async function ExperienceDetailPage({
 
         <AnimatedSection delay={0.4} className="flex justify-center mt-8">
           <Button variant="outline" asChild>
-            <Link href="/experience">
-              $ view_all_experiences
-            </Link>
+            <Link href="/experience">$ view_all_experiences</Link>
           </Button>
         </AnimatedSection>
       </div>
     </ClientPageWrapper>
-  );
+  )
 }

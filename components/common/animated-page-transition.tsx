@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { motion } from "framer-motion"
+import { ReactNode } from "react"
 
 interface AnimatedPageTransitionProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const pageVariants = {
@@ -28,7 +28,7 @@ const pageVariants = {
       ease: "easeInOut" as const,
     },
   },
-};
+}
 
 export const AnimatedPageTransition = ({
   children,
@@ -43,5 +43,5 @@ export const AnimatedPageTransition = ({
     >
       {children}
     </motion.div>
-  );
-};
+  )
+}

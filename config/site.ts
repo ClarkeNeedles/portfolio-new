@@ -2,8 +2,7 @@ export const siteConfig = {
   name: "Clarke Needles",
   authorName: "Clarke Needles",
   username: "ClarkeNeedles",
-  description:
-    "Clarke Needles - Computer Engineer ...",
+  description: "Clarke Needles - Computer Engineer ...",
   url: "https://clarkeneedles.com",
   links: {
     twitter: "https://x.com/namanbarkiya",
@@ -37,4 +36,4 @@ export const siteConfig = {
     "Frontend Developer",
     "Tech Portfolio",
   ],
-};
+}

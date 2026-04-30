@@ -1,14 +1,14 @@
-import { ValidPages } from "./constants";
+import { ValidPages } from "./constants"
 
 type PagesConfig = {
   [key in ValidPages]: {
-    title: string;
+    title: string
     metadata: {
-      title: string;
-      description: string;
-    };
-  };
-};
+      title: string
+      description: string
+    }
+  }
+}
 
 export const pagesConfig: PagesConfig = {
   home: {
@@ -55,4 +55,4 @@ export const pagesConfig: PagesConfig = {
         "Clarke Needles' professional journey and experience timeline.",
     },
   },
-};
+}

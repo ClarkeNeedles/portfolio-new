@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import * as React from "react";
+import Link from "next/link"
+import * as React from "react"
 
-import { buttonVariants } from "@/components/ui/button";
-import CustomTooltip from "@/components/ui/custom-tooltip";
-import { SocialLinks } from "@/config/socials";
-import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button"
+import CustomTooltip from "@/components/ui/custom-tooltip"
+import { SocialLinks } from "@/config/socials"
+import { cn } from "@/lib/utils"
 
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <footer className={cn(className)}>
-      <div className="container flex flex-col items-center justify-center gap-6 mt-10 py-10 md:h-24">        
+      <div className="container flex flex-col items-center justify-center gap-6 mt-10 py-10 md:h-24">
         <div className="flex items-center justify-center gap-8">
           {SocialLinks.map((item, ind) => (
             <CustomTooltip icon={item.icon} text={item.username} key={ind}>
@@ -33,5 +33,5 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
         </div>
       </div>
     </footer>
-  );
+  )
 }

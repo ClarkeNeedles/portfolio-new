@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { motion } from "framer-motion"
+import { ReactNode } from "react"
 
 interface ClientPageWrapperProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const pageVariants = {
@@ -20,7 +20,7 @@ const pageVariants = {
       ease: "easeInOut" as const,
     },
   },
-};
+}
 
 export const ClientPageWrapper = ({ children }: ClientPageWrapperProps) => {
   return (
@@ -32,5 +32,5 @@ export const ClientPageWrapper = ({ children }: ClientPageWrapperProps) => {
     >
       {children}
     </motion.div>
-  );
-};
+  )
+}

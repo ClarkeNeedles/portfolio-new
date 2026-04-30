@@ -1,23 +1,23 @@
-import { ValidCategory, ValidExpType, ValidSkills } from "./constants";
+import { ValidCategory, ValidExpType, ValidSkills } from "./constants"
 
 interface DescriptionDetailsInterface {
-  paragraphs: string[];
-  bullets: string[];
+  paragraphs: string[]
+  bullets: string[]
 }
 
 export interface ProjectInterface {
-  id: string;
-  type: ValidExpType;
-  companyName: string;
-  category: ValidCategory[];
-  shortDescription: string;
-  websiteLink?: string;
-  githubLink?: string;
-  techStack: ValidSkills[];
-  startDate: Date;
-  endDate: Date;
-  companyLogoImg: any;
-  descriptionDetails: DescriptionDetailsInterface;
+  id: string
+  type: ValidExpType
+  companyName: string
+  category: ValidCategory[]
+  shortDescription: string
+  websiteLink?: string
+  githubLink?: string
+  techStack: ValidSkills[]
+  startDate: Date
+  endDate: Date
+  companyLogoImg: any
+  descriptionDetails: DescriptionDetailsInterface
 }
 
 export const Projects: ProjectInterface[] = [
@@ -30,13 +30,7 @@ export const Projects: ProjectInterface[] = [
       "Personal portfolio website built from scratch using HTML, CSS, and JavaScript, featuring a custom contact system powered by the Resend API.",
     websiteLink: "https://clarkeneedles.github.io/portfolio/",
     githubLink: "https://github.com/ClarkeNeedles/portfolio",
-    techStack: [
-      "Javascript",
-      "CSS 3",
-      "HTML 5",
-      "Resend API",
-      "Vercel",
-    ],
+    techStack: ["Javascript", "CSS 3", "HTML 5", "Resend API", "Vercel"],
     startDate: new Date("2025-08-01T12:00:00"),
     endDate: new Date("2025-11-24T12:00:00"),
     companyLogoImg: "/projects/portfolio/image.png",
@@ -51,8 +45,8 @@ export const Projects: ProjectInterface[] = [
         "Deployed the application on Vercel with a clean, fast-loading UI and minimal dependencies.",
         "Implemented custom styling, SVG assets, and Boxicons to create a polished and consistent design.",
       ],
-    }
+    },
   },
-];
+]
 
-export const featuredProjects = Projects.slice(0, 3);
+export const featuredProjects = Projects.slice(0, 3)

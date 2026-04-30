@@ -1,7 +1,7 @@
-import Chip from "./chip";
+import Chip from "./chip"
 
 interface ChipContainerProps {
-  textArr: string[];
+  textArr: string[]
 }
 
 export default function ChipContainer({ textArr }: ChipContainerProps) {
@@ -11,5 +11,5 @@ export default function ChipContainer({ textArr }: ChipContainerProps) {
         <Chip key={ind} content={it} />
       ))}
     </div>
-  );
+  )
 }

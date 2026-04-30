@@ -1,23 +1,23 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 
-import { CustomModal } from "@/components/modals/custom-modal";
+import { CustomModal } from "@/components/modals/custom-modal"
 
 export const ModalProvider = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    setIsMounted(true)
+  }, [])
 
   if (!isMounted) {
-    return null;
+    return null
   }
 
   return (
     <>
       <CustomModal />
     </>
-  );
-};
+  )
+}

@@ -1,16 +1,16 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { ReactNode } from "react";
+import { motion } from "framer-motion"
+import Link from "next/link"
+import { ReactNode } from "react"
 
 interface AnimatedLinkProps {
-  href: string;
-  children: ReactNode;
-  className?: string;
-  onClick?: () => void;
-  target?: string;
-  rel?: string;
+  href: string
+  children: ReactNode
+  className?: string
+  onClick?: () => void
+  target?: string
+  rel?: string
 }
 
 export const AnimatedLink = ({
@@ -37,5 +37,5 @@ export const AnimatedLink = ({
         {children}
       </Link>
     </motion.div>
-  );
-};
+  )
+}

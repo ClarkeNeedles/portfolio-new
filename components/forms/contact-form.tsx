@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import * as z from "zod"
 
-import { Icons } from "@/components/common/icons";
-import { Button } from "@/components/ui/button";
+import { Icons } from "@/components/common/icons"
+import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
@@ -13,10 +13,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useModalStore } from "@/hooks/use-modal-store";
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { useModalStore } from "@/hooks/use-modal-store"
 
 const formSchema = z.object({
   name: z.string().min(3, {
@@ -27,10 +27,10 @@ const formSchema = z.object({
     message: "Please write something more descriptive.",
   }),
   social: z.string().url().optional().or(z.literal("")),
-});
+})
 
 export function ContactForm() {
-  const storeModal = useModalStore();
+  const storeModal = useModalStore()
 
   // const [open, setOpen] = useState(false);
 
@@ -42,7 +42,7 @@ export function ContactForm() {
       message: "",
       social: "",
     },
-  });
+  })
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -53,9 +53,9 @@ export function ContactForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(values),
-      });
+      })
 
-      form.reset();
+      form.reset()
 
       if (response.status === 200) {
         storeModal.onOpen({
@@ -63,10 +63,10 @@ export function ContactForm() {
           description:
             "Your message has been received! I appreciate your contact and will get back to you shortly.",
           icon: Icons.successAnimated,
-        });
+        })
       }
     } catch (err) {
-      console.log("Err!", err);
+      console.log("Err!", err)
     }
   }
 
@@ -118,5 +118,5 @@ export function ContactForm() {
         <Button type="submit">{"$ submit"}</Button>
       </form>
     </Form>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 
 const ProjectDescription: React.FC<{
-  paragraphs: string[];
-  bullets: string[];
+  paragraphs: string[]
+  bullets: string[]
 }> = ({ paragraphs, bullets }) => {
   return (
     <div>
@@ -17,7 +17,7 @@ const ProjectDescription: React.FC<{
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectDescription;
+export default ProjectDescription

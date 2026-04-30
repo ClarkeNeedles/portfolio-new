@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
-import { Modal } from "@/components/ui/modal";
-import { useModalStore } from "@/hooks/use-modal-store";
+import { Modal } from "@/components/ui/modal"
+import { useModalStore } from "@/hooks/use-modal-store"
 
 export const CustomModal = () => {
-  const modalStore = useModalStore();
+  const modalStore = useModalStore()
 
   return (
     <Modal
@@ -25,5 +25,5 @@ export const CustomModal = () => {
         </div>
       </div>
     </Modal>
-  );
-};
+  )
+}

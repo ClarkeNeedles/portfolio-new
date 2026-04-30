@@ -1,20 +1,24 @@
-import { Press_Start_2P } from "next/font/google";
-import Link from "next/link";
-import * as React from "react";
+import { Press_Start_2P } from "next/font/google"
+import Link from "next/link"
+import * as React from "react"
 
-import { siteConfig } from "@/config/site";
-import { useLockBody } from "@/hooks/use-lock-body";
-import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site"
+import { useLockBody } from "@/hooks/use-lock-body"
+import { cn } from "@/lib/utils"
 
 interface MobileNavProps {
-  items: any[];
-  children?: React.ReactNode;
+  items: any[]
+  children?: React.ReactNode
 }
 
-const pressStart2P = Press_Start_2P({weight: "400", subsets: ["latin"], variable: "--font-press-start-2p"});
+const pressStart2P = Press_Start_2P({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-press-start-2p",
+})
 
 export function MobileNav({ items, children }: MobileNavProps) {
-  useLockBody();
+  useLockBody()
 
   return (
     <div
@@ -45,5 +49,5 @@ export function MobileNav({ items, children }: MobileNavProps) {
         {children ? <div className="pt-2">{children}</div> : null}
       </div>
     </div>
-  );
+  )
 }

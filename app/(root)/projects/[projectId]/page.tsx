@@ -1,30 +1,30 @@
-import Image from "next/image";
-import Link from "next/link";
-import { redirect } from "next/navigation";
+import Image from "next/image"
+import Link from "next/link"
+import { redirect } from "next/navigation"
 
-import { Icons } from "@/components/common/icons";
-import ProjectDescription from "@/components/projects/project-description";
-import { buttonVariants } from "@/components/ui/button";
-import ChipContainer from "@/components/ui/chip-container";
-import CustomTooltip from "@/components/ui/custom-tooltip";
-import { Projects } from "@/config/projects";
-import { siteConfig } from "@/config/site";
-import { cn, formatDateFromObj } from "@/lib/utils";
-import profileImg from "@/public/profile-img.png";
+import { Icons } from "@/components/common/icons"
+import ProjectDescription from "@/components/projects/project-description"
+import { buttonVariants } from "@/components/ui/button"
+import ChipContainer from "@/components/ui/chip-container"
+import CustomTooltip from "@/components/ui/custom-tooltip"
+import { Projects } from "@/config/projects"
+import { siteConfig } from "@/config/site"
+import { cn, formatDateFromObj } from "@/lib/utils"
+import profileImg from "@/public/profile-img.png"
 
 interface ProjectPageProps {
   params: Promise<{
-    projectId: string;
-  }>;
+    projectId: string
+  }>
 }
 
-const githubUsername = "ClarkeNeedles";
+const githubUsername = "ClarkeNeedles"
 
 export default async function Project({ params }: ProjectPageProps) {
-  const { projectId } = await params;
-  let project = Projects.find((val) => val.id === projectId);
+  const { projectId } = await params
+  let project = Projects.find((val) => val.id === projectId)
   if (!project) {
-    redirect("/projects");
+    redirect("/projects")
   }
 
   return (
@@ -126,5 +126,5 @@ export default async function Project({ params }: ProjectPageProps) {
         </Link>
       </div>
     </article>
-  );
+  )
 }

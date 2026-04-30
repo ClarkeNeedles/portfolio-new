@@ -1,43 +1,55 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import Image from "next/image"
+import Link from "next/link"
+import React from "react"
 
-import { AnimatedSection } from "@/components/common/animated-section";
-import { Icons } from "@/components/common/icons";
-import { Button } from "@/components/ui/button";
-import { ExperienceInterface } from "@/config/experience";
+import { AnimatedSection } from "@/components/common/animated-section"
+import { Icons } from "@/components/common/icons"
+import { Button } from "@/components/ui/button"
+import { ExperienceInterface } from "@/config/experience"
 
 const months = [
-  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-];
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+]
 
 // Helper function to get duration text
 const getDurationText = (
   startDate: Date,
   endDate: Date | "Present"
 ): string => {
-  const startYear = new Date(startDate).getFullYear().toString();
-  const startMonth = new Date(startDate).getMonth();
-  const endString = typeof endDate === "string" ? "Present" : 
-    months[new Date(endDate).getMonth()] + " " + new Date(endDate).getFullYear().toString();
+  const startYear = new Date(startDate).getFullYear().toString()
+  const startMonth = new Date(startDate).getMonth()
+  const endString =
+    typeof endDate === "string"
+      ? "Present"
+      : months[new Date(endDate).getMonth()] +
+        " " +
+        new Date(endDate).getFullYear().toString()
 
-  return `${months[startMonth]} ${startYear} - ${endString}`;
-};
+  return `${months[startMonth]} ${startYear} - ${endString}`
+}
 
 interface TimelineProps {
-  experiences: ExperienceInterface[];
+  experiences: ExperienceInterface[]
 }
 
 const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
   // Sort experiences by date (most recent first)
   const sortedExperiences = [...experiences].sort((a, b) => {
-    const dateA = a.endDate === "Present" ? new Date() : a.endDate;
-    const dateB = b.endDate === "Present" ? new Date() : b.endDate;
-    return dateB.getTime() - dateA.getTime();
-  });
+    return b.startDate.getTime() - a.startDate.getTime()
+  })
 
   return (
     <div className="space-y-4">
@@ -51,13 +63,13 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
               <div className="flex items-start gap-4 flex-1 min-w-0">
                 {experience.logo && (
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg border-2 border-border overflow-hidden bg-white flex-shrink-0">
+                  <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-lg border-2 border-border overflow-hidden bg-white flex-shrink-0">
                     <Image
                       src={experience.logo}
                       alt={experience.company}
-                      width={64}
-                      height={64}
-                      className="w-full h-full object-contain p-2"
+                      fill
+                      sizes="(min-width: 640px) 64px, 48px"
+                      className="object-cover"
                     />
                   </div>
                 )}
@@ -94,6 +106,21 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                   <p className="text-sm text-muted-foreground line-clamp-2">
                     {"> " + experience.description[0]}
                   </p>
+                  <div className="mt-3 sm:mt-4 flex flex-wrap gap-1">
+                    {experience.skills.slice(0, 2).map((skill, index) => (
+                      <span
+                        key={index}
+                        className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-muted-foreground"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                    {experience.skills.length > 2 && (
+                      <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-muted-foreground">
+                        +{experience.skills.length - 2} more
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
               <Button
@@ -111,7 +138,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
         </AnimatedSection>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Timeline;
+export default Timeline

@@ -1,7 +1,7 @@
-import { skillsInterface } from "@/config/skills";
+import { skillsInterface } from "@/config/skills"
 
 interface SkillsCardProps {
-  skills: skillsInterface[];
+  skills: skillsInterface[]
 }
 
 export default function SkillsCard({ skills }: SkillsCardProps) {
@@ -21,7 +21,9 @@ export default function SkillsCard({ skills }: SkillsCardProps) {
               </p>
               {skill.projects && skill.projects.length > 0 && (
                 <div className="flex flex-wrap gap-2 pt-2">
-                  <p className="text-xs text-muted-foreground lowercase">{"> Used in:"}</p>
+                  <p className="text-xs text-muted-foreground lowercase">
+                    {"Used in:"}
+                  </p>
                   {skill.projects.map((project) => (
                     <a
                       key={project.name}
@@ -38,5 +40,5 @@ export default function SkillsCard({ skills }: SkillsCardProps) {
         </div>
       ))}
     </div>
-  );
+  )
 }

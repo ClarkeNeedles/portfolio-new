@@ -32,7 +32,35 @@ export type ValidSkills =
   | "Jira"
   | "SVN"
   | "Jenkins"
-  | "Django";
+  | "Django"
+  | "C"
+  | "C++"
+  | "WinAPI"
+  | "ATL"
+  | "COM"
+  | "ROS2"
+  | "Nav2"
+  | "SLAM"
+  | "PX4"
+  | "MAVLink"
+  | "QGroundControl"
+  | "Gazebo"
+  | "GitHub"
+  | "Docker"
+  | "Linux"
+  | "Technical Leadership"
+  | "Software Architecture"
+  | "System Design"
+  | "Project Management"
+  | "Stakeholder Communication"
+  | "Team Mentorship"
+  | "Requirements Analysis"
+  | "Technical Documentation"
+  | "Code Review"
+  | "Embedded Systems"
+  | "Firmware Development"
+  | "Real-Time Systems"
+  | "Low-Level Programming"
 
 export type ValidCategory =
   | "Full Stack"
@@ -41,9 +69,9 @@ export type ValidCategory =
   | "UI/UX"
   | "Web Dev"
   | "Mobile Dev"
-  | "3D Modeling";
+  | "3D Modeling"
 
-export type ValidExpType = "Personal" | "Team";
+export type ValidExpType = "Personal" | "Team"
 
 export type ValidPages =
   | "home"
@@ -51,4 +79,4 @@ export type ValidPages =
   | "projects"
   | "experience"
   | "contact"
-  | "resume";
+  | "resume"

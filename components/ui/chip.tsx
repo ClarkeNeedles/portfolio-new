@@ -1,5 +1,5 @@
 interface ChipProps {
-  content: string;
+  content: string
 }
 
 export default function Chip({ content }: ChipProps) {
@@ -7,5 +7,5 @@ export default function Chip({ content }: ChipProps) {
     <div className="center relative inline-block select-none whitespace-nowrap rounded-md py-2 px-3 align-baseline font-sans text-xs font-bold leading-none text-primary border border-border bg-background">
       {content}
     </div>
-  );
+  )
 }

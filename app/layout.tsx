@@ -1,20 +1,20 @@
-import "./globals.css";
+import "./globals.css"
 
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google"
 
-import { ThemeProvider } from "@/components/common/theme-provider";
-import { Toaster } from "@/components/ui/toaster";
-import { siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils";
-import { ModalProvider } from "@/providers/modal-provider";
+import { ThemeProvider } from "@/components/common/theme-provider"
+import { Toaster } from "@/components/ui/toaster"
+import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
+import { ModalProvider } from "@/providers/modal-provider"
 
 const fontMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-});
+})
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export const metadata = {
@@ -81,7 +81,7 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-};
+}
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
@@ -97,10 +97,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           attribute="class"
           defaultTheme="dark"
           enableSystem
-          themes={[
-            "light",
-            "dark",
-          ]}
+          themes={["light", "dark"]}
         >
           {children}
           <Toaster />
@@ -108,5 +105,5 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

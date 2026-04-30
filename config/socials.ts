@@ -1,10 +1,10 @@
-import { Icons } from "@/components/common/icons";
+import { Icons } from "@/components/common/icons"
 
 interface SocialInterface {
-  name: string;
-  username: string;
-  icon: any;
-  link: string;
+  name: string
+  username: string
+  icon: any
+  link: string
 }
 
 export const SocialLinks: SocialInterface[] = [
@@ -26,4 +26,4 @@ export const SocialLinks: SocialInterface[] = [
     icon: Icons.gmail,
     link: "mailto:c.w.needles@gmail.com",
   },
-];
+]
