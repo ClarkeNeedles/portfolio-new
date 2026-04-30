@@ -282,12 +282,13 @@
   50% {
     opacity: 0;
   }
-}
+} 
 
 .cursor {
   display: inline-block;
-  margin-left: 4px;
+  margin-left: 0;
   animation: blink 1s step-start infinite;
+  transform: scale(0.62) translate(-6px, 2.5px);
 }
 
 body {

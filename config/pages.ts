@@ -19,7 +19,7 @@ export const pagesConfig: PagesConfig = {
     },
   },
   skills: {
-    title: "/skills:~$ ",
+    title: "skills",
     metadata: {
       title: "Skills",
       description:
@@ -27,28 +27,28 @@ export const pagesConfig: PagesConfig = {
     },
   },
   projects: {
-    title: "/projects:~$ ",
+    title: "projects",
     metadata: {
       title: "Projects",
       description: "Clarke Needles' projects in building web applications.",
     },
   },
   contact: {
-    title: "/contact:~$ ",
+    title: "contact",
     metadata: {
       title: "Contact",
       description: "Contact Clarke Needles.",
     },
   },
   resume: {
-    title: "/resume:~$ ",
+    title: "resume",
     metadata: {
       title: "Resume",
       description: "Clarke Needles' resume.",
     },
   },
   experience: {
-    title: "/experience:~$ ",
+    title: "experience",
     metadata: {
       title: "Experience",
       description:

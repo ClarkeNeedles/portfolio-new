@@ -168,6 +168,7 @@ export default async function ExperienceDetailPage({
                     <div className="flex-1 text-center sm:text-left">
                       <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
                         {"$ " + experience.position}
+                        <span className="cursor">█</span>
                       </h1>
                       <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
                         <span className="text-md font-medium text-muted-foreground">

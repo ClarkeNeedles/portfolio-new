@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default function ExperiencePage() {
   return (
     <PageContainer
-      title={pagesConfig.experience.title}
+      title={"/" + pagesConfig.experience.title + ":~$ "}
     >
       <Timeline experiences={experiences} />
     </PageContainer>

@@ -9,6 +9,7 @@ export default function PageHeader({ title }: PageHeaderProps) {
         <div className="flex-1 space-y-4">
           <h1 className="inline-block font-heading text-4xl tracking-tight lg:text-5xl lowercase">
             {title}
+            <span className="cursor">█</span>
           </h1>
         </div>
       </div>

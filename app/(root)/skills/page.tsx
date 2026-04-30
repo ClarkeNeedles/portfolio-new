@@ -13,8 +13,7 @@ export const metadata: Metadata = {
 export default function SkillsPage() {
   return (
     <PageContainer
-      title={pagesConfig.skills.title}
-      description={pagesConfig.skills.description}
+      title={"/" + pagesConfig.skills.title + ":~$ "}
     >
       <SkillsCard skills={skills} />
     </PageContainer>

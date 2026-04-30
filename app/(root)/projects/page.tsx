@@ -49,7 +49,7 @@ export default function ProjectsPage() {
 
   return (
     <PageContainer
-      title={pagesConfig.projects.title}
+      title={"/" + pagesConfig.projects.title + ":~$ "}
     >
       <ResponsiveTabs items={tabItems} defaultValue="all" />
     </PageContainer>

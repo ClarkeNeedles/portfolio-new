@@ -84,11 +84,11 @@ export default function IndexPage() {
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            {"> clarke needles - computer engineer"}
+            {"> clarke needles"}
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base lowercase">
-              Computer Engineer working with ...
+              {"> Computer Engineer focused on firmware, embedded systems, and robotics, with a passion for building reliable, low-level systems."}
             </p>
           </div>
 
@@ -134,7 +134,8 @@ export default function IndexPage() {
             as="h2"
             className="font-heading text-2xl leading-[1.1] sm:text-2xl md:text-5xl"
           >
-            {pagesConfig.projects.title}
+            {"/" + pagesConfig.projects.title + ":~$ "}
+            <span className="cursor">█</span>
           </AnimatedText>
         </div>
         <div className="w-full">
@@ -169,7 +170,8 @@ export default function IndexPage() {
             as="h2"
             className="font-heading text-2xl leading-[1.1] sm:text-2xl md:text-5xl"
           >
-            {pagesConfig.experience.title}
+            {"/" + pagesConfig.experience.title + ":~$ "}
+            <span className="cursor">█</span>
           </AnimatedText>
         </div>
         <div className="mx-auto grid justify-center gap-4 md:w-full lg:grid-cols-3">
@@ -201,7 +203,8 @@ export default function IndexPage() {
             as="h2"
             className="font-heading text-2xl leading-[1.1] sm:text-2xl md:text-5xl"
           >
-            {pagesConfig.skills.title}
+            {"/" + pagesConfig.skills.title + ":~$ "}
+            <span className="cursor">█</span>
           </AnimatedText>
         </div>
         <SkillsCard skills={featuredSkills} />
