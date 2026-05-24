@@ -42,7 +42,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {project.type === "Personal" ? (
           <Icons.userFill className="h-4 w-4" />
         ) : (
-          <Icons.work className="h-4 w-4" />
+          <Icons.team className="h-4 w-4" />
         )}
       </div>
     </div>

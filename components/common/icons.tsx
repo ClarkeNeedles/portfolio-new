@@ -27,6 +27,7 @@ import {
   SunMedium,
   Trash,
   User,
+  Users,
   X,
 } from "lucide-react"
 import { AiFillStar } from "react-icons/ai"
@@ -70,6 +71,7 @@ export const Icons = {
   add: Plus,
   warning: AlertTriangle,
   user: User,
+  team: Users,
   arrowRight: ArrowRight,
   help: HelpCircle,
   pizza: Pizza,
@@ -99,7 +101,6 @@ export const Icons = {
   linkedin: FaLinkedin,
   gitHub: FaGithub,
   userFill: BiSolidUser,
-  work: HiBriefcase,
   successAnimated: ({ ...props }: LucideProps) => (
     <div className="svg-container">
       <svg
