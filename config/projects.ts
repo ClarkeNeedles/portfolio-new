@@ -32,7 +32,7 @@ export const Projects: ProjectInterface[] = [
     techStack: ["C++", "SSE", "AVX", "Multithreading", "WinAPI"],
     startDate: new Date("2025-07-31T12:00:00"),
     endDate: new Date("2025-09-04T12:00:00"),
-    companyLogoImg: "/projects/fractal_generator/FractalGenerator.jpg",
+    companyLogoImg: "/projects/fractal_generator/image.jpg",
     descriptionDetails: {
       paragraphs: [
         "> Developed a high-performance fractal generation application in C++ using SIMD optimizations (SSE and AVX) alongside multithreading to accelerate mathematical rendering workloads.",
@@ -45,6 +45,72 @@ export const Projects: ProjectInterface[] = [
         "Added GIF recording functionality, gradient mapping, zooming, and panning controls to create an interactive real-time exploration experience.",
       ],
     },
+  },
+  {
+    id: "autonomous_picar",
+    companyName: "Autonomous_PiCar",
+    type: "Team",
+    category: ["Robotics", "Computer Vision", "Embedded Systems", "Autonomous Systems", "Control Systems"],
+    shortDescription:
+      "An autonomous Raspberry Pi-based vehicle integrating computer vision and control systems for real-time navigation and self-driving behavior experiments.",
+    githubLink: "https://github.com/ClarkeNeedles/Autonomous-PiCar",
+    techStack: [
+      "OpenCV",
+      "Robotics",
+      "Raspberry Pi",
+      "Computer Vision",
+      "Python",
+      "C++",
+      "Linux",
+    ],
+    startDate: new Date("2026-01-01T12:00:00"),
+    endDate: new Date("2026-04-06T12:00:00"),
+    companyLogoImg: "/projects/autonomous_picar/image.png",
+    descriptionDetails: {
+      paragraphs: [
+        "> Developed an autonomous robotics system on a Raspberry Pi-based PiCar platform, integrating computer vision and control logic to enable real-time navigation and self-driving behavior.",
+        "> Designed a modular robotics architecture focused on perception, decision-making, and actuation, enabling experimentation with autonomous driving algorithms in a constrained embedded environment."
+      ],
+      bullets: [
+        "Implemented computer vision pipeline using OpenCV for real-time lane detection and environment perception.",
+        "Developed motor control and actuation logic for closed-loop navigation on a Raspberry Pi robotics platform.",
+        "Structured the system for modular robotics development, separating perception, control, and hardware interface layers.",
+        "Integrated sensor-driven decision-making to enable autonomous movement behaviors in real-world conditions.",
+        "Designed for extensibility to support future ROS2 integration and advanced autonomy features."
+      ]
+    }
+  },
+  {
+    id: "verilog_cpu",
+    companyName: "Verilog_CPU",
+    type: "Team",
+    category: ["Digital Design", "Computer Architecture", "Verilog", "FPGA Design", "RTL Design"],
+    shortDescription:
+      "A custom CPU designed in Verilog, implementing core computer architecture concepts through RTL design, simulation, and hardware-level system modeling.",
+    githubLink: "https://github.com/ClarkeNeedles/Verilog-CPU",
+    techStack: [
+      "Verilog",
+      "RTL Design",
+      "ModelSim",
+      "Digital Logic Design",
+      "Computer Architecture",
+    ],
+    startDate: new Date("2025-01-01T12:00:00"),
+    endDate: new Date("2025-04-04T12:00:00"),
+    companyLogoImg: "/projects/verilog_cpu/image.png",
+    descriptionDetails: {
+      paragraphs: [
+        "> Designed and implemented a custom CPU in Verilog HDL, applying core computer architecture principles including instruction execution, datapath design, and control logic.",
+        "> Built and simulated a hardware-level processor architecture to explore how instructions are fetched, decoded, and executed at the RTL level."
+      ],
+      bullets: [
+        "Developed a modular CPU architecture in Verilog including ALU, control unit, registers, and datapath components.",
+        "Implemented instruction decoding and execution logic following a simplified ISA design.",
+        "Simulated hardware behavior using standard RTL verification workflows.",
+        "Explored fundamental computer architecture concepts including pipelining (if applicable), control flow, and signal timing.",
+        "Validated CPU functionality through testbenches and simulation-driven verification."
+      ]
+    }
   },
   {
     id: "knowledge_transfer_ai",
@@ -67,9 +133,7 @@ export const Projects: ProjectInterface[] = [
     ],
     startDate: new Date("2026-01-8T12:00:00"),
     endDate: new Date("2026-01-16T12:00:00"),
-
     companyLogoImg: "/projects/knowledge_transfer_ai/image.png",
-
     descriptionDetails: {
       paragraphs: [
         "> Built a full-stack AI-powered learning platform that generates role-tailored educational content using a structured onboarding system and RAG-based knowledge retrieval pipeline.",
@@ -84,7 +148,48 @@ export const Projects: ProjectInterface[] = [
         "Used SQLite for session tracking and backend state management."
       ]
     }
-  }
+  },
+  {
+    id: "grade_tracker_app",
+    companyName: "Grade_Tracker_App",
+    type: "Personal",
+    category: [
+      "Qt",
+      "Full Stack",
+      "Database Systems",
+      "Desktop Development"
+    ],
+    shortDescription:
+      "A Qt-based desktop application for tracking course grades, study hours, and academic progress, featuring cloud synchronization, friend comparisons, and dynamic ranking systems.",
+    githubLink: "https://github.com/ClarkeNeedles/Grade-Tracker-App",
+    techStack: [
+      "Qt 6",
+      "Supabase",
+      "PostgreSQL",
+      "C++",
+      "JSON",
+      "CMake"
+    ],
+    startDate: new Date("2025-09-01T12:00:00"),
+    endDate: new Date("2025-12-01T12:00:00"),
+    companyLogoImg: "/projects/grade_tracker_app/image.png",
+    descriptionDetails: {
+      paragraphs: [
+        "> Developed a full-stack academic productivity application using C++ and Qt, enabling students to manage courses, track grades, monitor study habits, and visualize academic performance through an intuitive desktop interface.",
+        "> Integrated a cloud-hosted Supabase backend for authentication, persistent data storage, and real-time synchronization, while implementing social and competitive features such as friend tracking and rank comparisons."
+      ],
+      bullets: [
+        "Designed and implemented a multi-page desktop application using Qt Widgets, Qt Designer, and C++.",
+        "Integrated Supabase REST APIs using Qt Network to support user authentication, cloud data storage, and account management.",
+        "Built course management functionality allowing users to track grades, assignments, weighted averages, and study hours.",
+        "Implemented dynamic ranking systems based on academic performance and productivity metrics.",
+        "Developed friend comparison features enabling users to view peer rankings, course progress, and study statistics.",
+        "Created data visualizations using Qt Charts to display grade distributions and academic performance metrics.",
+        "Structured the application using modular UI, database, and business-logic layers to improve maintainability and scalability.",
+        "Utilized environment variables and configuration management to securely handle API keys and backend credentials."
+      ]
+    }
+  },
   {
     id: "portfolio",
     companyName: "Portfolio_Website",
@@ -122,7 +227,7 @@ export const Projects: ProjectInterface[] = [
     techStack: ["C", "Makefile", "Algorithms", "Data Structures", "Unit Testing"],
     startDate: new Date("2025-06-20T12:00:00"),
     endDate: new Date("2025-08-30T12:00:00"),
-    companyLogoImg: "/projects/data_structures/DataStructures.jpg",
+    companyLogoImg: "/projects/data_structures/image.jpg",
     descriptionDetails: {
       paragraphs: [
         "> Developed a low-level data structures and algorithms library entirely in C to strengthen understanding of memory management, abstraction, and systems-level programming concepts.",
@@ -147,7 +252,7 @@ export const Projects: ProjectInterface[] = [
     techStack: ["Python", "NumPy", "Pandas", "Scikit-learn"],
     startDate: new Date("2025-03-28T12:00:00"),
     endDate: new Date("2025-08-18T12:00:00"),
-    companyLogoImg: "/projects/machine_learning/MachineLearningProj.png",
+    companyLogoImg: "/projects/machine_learning_proj/image.png",
     descriptionDetails: {
       paragraphs: [
         "> Developed a machine learning classification system in Python capable of distinguishing between walking and jumping motion patterns using processed input data and predictive modeling techniques.",
@@ -178,7 +283,7 @@ export const Projects: ProjectInterface[] = [
     ],
     startDate: new Date("2025-01-05T12:00:00"),
     endDate: new Date("2025-04-30T12:00:00"),
-    companyLogoImg: "/projects/audio_amp/AudioAmp.png",
+    companyLogoImg: "/projects/audio_amp/image.png",
     descriptionDetails: {
       paragraphs: [
         "> Designed and analyzed an analog audio amplification system featuring an AC-DC power supply, full bridge rectifier, voltage regulation, and a high-current Darlington transistor amplifier stage.",

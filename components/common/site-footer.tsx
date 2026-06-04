@@ -11,7 +11,8 @@ import { cn } from "@/lib/utils"
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <footer className={cn(className)}>
-      <div className="container flex flex-col items-center justify-center gap-6 mt-10 py-10 md:h-24">
+      <div className="container flex flex-col items-center justify-center gap-6 mt-10 py-10 md:h-24 mb-8">
+        {/* Social Links */}
         <div className="flex items-center justify-center gap-8">
           {SocialLinks.map((item, ind) => (
             <CustomTooltip icon={item.icon} text={item.username} key={ind}>
@@ -31,6 +32,11 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             </CustomTooltip>
           ))}
         </div>
+        {/* Copyright */}
+        <div className="text-sm text-muted-foreground text-center">
+          © {new Date().getFullYear()} Clarke Needles. All rights reserved.
+        </div>
+
       </div>
     </footer>
   )
