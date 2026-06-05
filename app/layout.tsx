@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { ModalProvider } from "@/providers/modal-provider"
+import { Analytics } from "@vercel/analytics/react"
 
 const fontMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -103,6 +104,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Toaster />
           <ModalProvider />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )

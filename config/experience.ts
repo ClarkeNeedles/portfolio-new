@@ -17,9 +17,9 @@ export interface ExperienceInterface {
 export const experiences: ExperienceInterface[] = [
   {
     id: "semtech_firmware",
-    position: "Firmware_Designer",
+    position: "Firmware Designer",
     company: "Semtech Corporation",
-    location: "Kanata, ON",
+    location: "Kanata",
     startDate: new Date("2026-05-01T12:00:00"),
     endDate: "Present",
     description: [
@@ -41,13 +41,13 @@ export const experiences: ExperienceInterface[] = [
       "Low-Level Programming",
     ],
     companyUrl: "https://www.semtech.com/",
-    logo: "/experience/semtech.jpg",
+    logo: "/experience/semtech.webp",
   },
   {
     id: "qadt_autonomy",
-    position: "Autonomy_Software_Dev",
-    company: "Queen's Aerospace Design Team (QADT)",
-    location: "Kingston, ON",
+    position: "Autonomy Software",
+    company: "QADT",
+    location: "Kingston",
     startDate: new Date("2025-09-01T12:00:00"),
     endDate: "Present",
     description: [
@@ -76,13 +76,13 @@ export const experiences: ExperienceInterface[] = [
       "Linux",
     ],
     companyUrl: "https://qadt.ca/",
-    logo: "/experience/qadt.png",
+    logo: "/experience/qadt.webp",
   },
   {
     id: "fujifilm_software",
-    position: "SE_Intern",
+    position: "SWE Intern",
     company: "FUJIFILM VisualSonics",
-    location: "Toronto, ON",
+    location: "Toronto",
     startDate: new Date("2025-05-01T12:00:00"),
     endDate: new Date("2025-08-31T12:00:00"),
     description: [
@@ -112,13 +112,13 @@ export const experiences: ExperienceInterface[] = [
       "Jenkins",
     ],
     companyUrl: "https://www.visualsonics.com/",
-    logo: "/experience/fujifilm.png",
+    logo: "/experience/fujifilm.webp",
   },
   {
     id: "project_manager",
-    position: "Project_Manager",
+    position: "Project Manager",
     company: "Smith School of Engineering, Queen's University",
-    location: "Kingston, ON",
+    location: "Kingston",
     startDate: new Date("2026-01-01T12:00:00"),
     endDate: new Date("2026-04-31T12:00:00"),
     description: [
@@ -144,13 +144,13 @@ export const experiences: ExperienceInterface[] = [
       "Code Review",
     ],
     companyUrl: "https://smithengineering.queensu.ca/first-year/first-year-courses.html",
-    logo: "/experience/smith.png",
+    logo: "/experience/smith.webp",
   },
   {
     id: "fujifilm_QA",
-    position: "QA_Engineering_Intern",
+    position: "QA Intern",
     company: "FUJIFILM VisualSonics",
-    location: "Toronto, ON",
+    location: "Toronto",
     startDate: new Date("2024-05-01T12:00:00"),
     endDate: new Date("2024-08-31T12:00:00"),
     description: [
@@ -178,6 +178,6 @@ export const experiences: ExperienceInterface[] = [
       "Jenkins",
     ],
     companyUrl: "https://www.visualsonics.com/",
-    logo: "/experience/fujifilm.png",
+    logo: "/experience/fujifilm.webp",
   },
 ]

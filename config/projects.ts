@@ -23,7 +23,7 @@ export interface ProjectInterface {
 export const Projects: ProjectInterface[] = [
   {
     id: "fractal_generator",
-    companyName: "Fractal_Generator",
+    companyName: "Fractal Generator",
     type: "Personal",
     category: ["WinAPI", "Optimization", "Multithreading", "GUI Development"],
     shortDescription:
@@ -32,11 +32,11 @@ export const Projects: ProjectInterface[] = [
     techStack: ["C++", "SSE", "AVX", "Multithreading", "WinAPI"],
     startDate: new Date("2025-07-31T12:00:00"),
     endDate: new Date("2025-09-04T12:00:00"),
-    companyLogoImg: "/projects/fractal_generator/image.jpg",
+    companyLogoImg: "/projects/fractal_generator.webp",
     descriptionDetails: {
       paragraphs: [
-        "> Developed a high-performance fractal generation application in C++ using SIMD optimizations (SSE and AVX) alongside multithreading to accelerate mathematical rendering workloads.",
-        "> The application allows users to explore and record multiple fractal types in real time while comparing rendering performance across different computational methods and processor register sizes.",
+        "Developed a high-performance fractal generation application in C++ using SIMD optimizations (SSE and AVX) alongside multithreading to accelerate mathematical rendering workloads.",
+        "The application allows users to explore and record multiple fractal types in real time while comparing rendering performance across different computational methods and processor register sizes.",
       ],
       bullets: [
         "Built an interactive fractal visualization tool in C++ using WinAPI with support for Mandelbrot, Burning Ship, Nova, Phoenix, and Multibrot fractals.",
@@ -48,7 +48,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "autonomous_picar",
-    companyName: "Autonomous_PiCar",
+    companyName: "Autonomous PiCar",
     type: "Team",
     category: ["Robotics", "Computer Vision", "Embedded Systems", "Autonomous Systems", "Control Systems"],
     shortDescription:
@@ -65,11 +65,11 @@ export const Projects: ProjectInterface[] = [
     ],
     startDate: new Date("2026-01-01T12:00:00"),
     endDate: new Date("2026-04-06T12:00:00"),
-    companyLogoImg: "/projects/autonomous_picar/image.png",
+    companyLogoImg: "/projects/autonomous_picar.webp",
     descriptionDetails: {
       paragraphs: [
-        "> Developed an autonomous robotics system on a Raspberry Pi-based PiCar platform, integrating computer vision and control logic to enable real-time navigation and self-driving behavior.",
-        "> Designed a modular robotics architecture focused on perception, decision-making, and actuation, enabling experimentation with autonomous driving algorithms in a constrained embedded environment."
+        "Developed an autonomous robotics system on a Raspberry Pi-based PiCar platform, integrating computer vision and control logic to enable real-time navigation and self-driving behavior.",
+        "Designed a modular robotics architecture focused on perception, decision-making, and actuation, enabling experimentation with autonomous driving algorithms in a constrained embedded environment."
       ],
       bullets: [
         "Implemented computer vision pipeline using OpenCV for real-time lane detection and environment perception.",
@@ -82,7 +82,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "verilog_cpu",
-    companyName: "Verilog_CPU",
+    companyName: "Verilog CPU",
     type: "Team",
     category: ["Digital Design", "Computer Architecture", "Verilog", "FPGA Design", "RTL Design"],
     shortDescription:
@@ -97,11 +97,11 @@ export const Projects: ProjectInterface[] = [
     ],
     startDate: new Date("2025-01-01T12:00:00"),
     endDate: new Date("2025-04-04T12:00:00"),
-    companyLogoImg: "/projects/verilog_cpu/image.png",
+    companyLogoImg: "/projects/verilog_cpu.webp",
     descriptionDetails: {
       paragraphs: [
-        "> Designed and implemented a custom CPU in Verilog HDL, applying core computer architecture principles including instruction execution, datapath design, and control logic.",
-        "> Built and simulated a hardware-level processor architecture to explore how instructions are fetched, decoded, and executed at the RTL level."
+        "Designed and implemented a custom CPU in Verilog HDL, applying core computer architecture principles including instruction execution, datapath design, and control logic.",
+        "Built and simulated a hardware-level processor architecture to explore how instructions are fetched, decoded, and executed at the RTL level."
       ],
       bullets: [
         "Developed a modular CPU architecture in Verilog including ALU, control unit, registers, and datapath components.",
@@ -114,7 +114,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "knowledge_transfer_ai",
-    companyName: "Knowledge_Transfer_AI",
+    companyName: "Knowledge Transfer AI",
     type: "Team",
     category: ["AI Systems", "Full-Stack Development", "RAG"],
     shortDescription:
@@ -133,11 +133,11 @@ export const Projects: ProjectInterface[] = [
     ],
     startDate: new Date("2026-01-8T12:00:00"),
     endDate: new Date("2026-01-16T12:00:00"),
-    companyLogoImg: "/projects/knowledge_transfer_ai/image.png",
+    companyLogoImg: "/projects/knowledge_transfer_ai.webp",
     descriptionDetails: {
       paragraphs: [
-        "> Built a full-stack AI-powered learning platform that generates role-tailored educational content using a structured onboarding system and RAG-based knowledge retrieval pipeline.",
-        "> Integrated multiple AI services including Backboard API for orchestration and ElevenLabs for text-to-speech, enabling a complete interactive learning experience from content generation to audio narration."
+        "Built a full-stack AI-powered learning platform that generates role-tailored educational content using a structured onboarding system and RAG-based knowledge retrieval pipeline.",
+        "Integrated multiple AI services including Backboard API for orchestration and ElevenLabs for text-to-speech, enabling a complete interactive learning experience from content generation to audio narration."
       ],
       bullets: [
         "Developed a React + Vite frontend with onboarding, lecture management, and interactive learning interfaces.",
@@ -151,7 +151,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "grade_tracker_app",
-    companyName: "Grade_Tracker_App",
+    companyName: "Grade Tracker App",
     type: "Personal",
     category: [
       "Qt",
@@ -172,11 +172,11 @@ export const Projects: ProjectInterface[] = [
     ],
     startDate: new Date("2025-09-01T12:00:00"),
     endDate: new Date("2025-12-01T12:00:00"),
-    companyLogoImg: "/projects/grade_tracker_app/image.png",
+    companyLogoImg: "/projects/grade_tracker_app.webp",
     descriptionDetails: {
       paragraphs: [
-        "> Developed a full-stack academic productivity application using C++ and Qt, enabling students to manage courses, track grades, monitor study habits, and visualize academic performance through an intuitive desktop interface.",
-        "> Integrated a cloud-hosted Supabase backend for authentication, persistent data storage, and real-time synchronization, while implementing social and competitive features such as friend tracking and rank comparisons."
+        "Developed a full-stack academic productivity application using C++ and Qt, enabling students to manage courses, track grades, monitor study habits, and visualize academic performance through an intuitive desktop interface.",
+        "Integrated a cloud-hosted Supabase backend for authentication, persistent data storage, and real-time synchronization, while implementing social and competitive features such as friend tracking and rank comparisons."
       ],
       bullets: [
         "Designed and implemented a multi-page desktop application using Qt Widgets, Qt Designer, and C++.",
@@ -192,7 +192,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "portfolio",
-    companyName: "Portfolio_Website",
+    companyName: "Portfolio Website",
     type: "Personal",
     category: ["Web Dev", "Full Stack", "Frontend", "Backend", "UI/UX"],
     shortDescription:
@@ -202,11 +202,11 @@ export const Projects: ProjectInterface[] = [
     techStack: ["Javascript", "CSS 3", "HTML 5", "Resend API", "Vercel"],
     startDate: new Date("2025-08-01T12:00:00"),
     endDate: new Date("2025-11-24T12:00:00"),
-    companyLogoImg: "/projects/portfolio/image.png",
+    companyLogoImg: "/projects/portfolio.webp",
     descriptionDetails: {
       paragraphs: [
-        "> Built a personal portfolio website from scratch using vanilla HTML, CSS, and JavaScript, focusing on understanding core web fundamentals without relying on modern frameworks.",
-        "> The project includes a custom contact system powered by the Resend API, enabling users to send emails directly through the site while maintaining a simple and lightweight architecture.",
+        "Built a personal portfolio website from scratch using vanilla HTML, CSS, and JavaScript, focusing on understanding core web fundamentals without relying on modern frameworks.",
+        "The project includes a custom contact system powered by the Resend API, enabling users to send emails directly through the site while maintaining a simple and lightweight architecture.",
       ],
       bullets: [
         "Developed a fully responsive portfolio website using pure HTML, CSS, and JavaScript with no frameworks.",
@@ -218,7 +218,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "data_structures",
-    companyName: "Data_Structures",
+    companyName: "Data Structures",
     type: "Personal",
     category: ["Algorithms", "Data Structures", "Systems Programming", "C Library"],
     shortDescription:
@@ -227,11 +227,11 @@ export const Projects: ProjectInterface[] = [
     techStack: ["C", "Makefile", "Algorithms", "Data Structures", "Unit Testing"],
     startDate: new Date("2025-06-20T12:00:00"),
     endDate: new Date("2025-08-30T12:00:00"),
-    companyLogoImg: "/projects/data_structures/image.jpg",
+    companyLogoImg: "/projects/data_structures.webp",
     descriptionDetails: {
       paragraphs: [
-        "> Developed a low-level data structures and algorithms library entirely in C to strengthen understanding of memory management, abstraction, and systems-level programming concepts.",
-        "> The project includes reusable implementations of core data structures alongside algorithmic utilities, organized into modular source, include, and testing directories with a custom Makefile build system.",
+        "Developed a low-level data structures and algorithms library entirely in C to strengthen understanding of memory management, abstraction, and systems-level programming concepts.",
+        "The project includes reusable implementations of core data structures alongside algorithmic utilities, organized into modular source, include, and testing directories with a custom Makefile build system.",
       ],
       bullets: [
         "Implemented custom data structures and algorithms in pure C with a focus on performance, modularity, and low-level memory control.",
@@ -243,7 +243,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "machine_learning_proj",
-    companyName: "Machine_Learning_Project",
+    companyName: "Machine Learning Project",
     type: "Team",
     category: ["Machine Learning", "Python", "Data Analysis"],
     shortDescription:
@@ -252,11 +252,11 @@ export const Projects: ProjectInterface[] = [
     techStack: ["Python", "NumPy", "Pandas", "Scikit-learn"],
     startDate: new Date("2025-03-28T12:00:00"),
     endDate: new Date("2025-08-18T12:00:00"),
-    companyLogoImg: "/projects/machine_learning_proj/image.png",
+    companyLogoImg: "/projects/machine_learning_proj.webp",
     descriptionDetails: {
       paragraphs: [
-        "> Developed a machine learning classification system in Python capable of distinguishing between walking and jumping motion patterns using processed input data and predictive modeling techniques.",
-        "> The project explored the end-to-end machine learning workflow, including data preprocessing, feature extraction, model training, and evaluation to better understand supervised learning concepts and classification accuracy.",
+        "Developed a machine learning classification system in Python capable of distinguishing between walking and jumping motion patterns using processed input data and predictive modeling techniques.",
+        "The project explored the end-to-end machine learning workflow, including data preprocessing, feature extraction, model training, and evaluation to better understand supervised learning concepts and classification accuracy.",
       ],
       bullets: [
         "Built a supervised machine learning model in Python to classify movement patterns such as walking and jumping.",
@@ -268,7 +268,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "audio_amp",
-    companyName: "Audio_Amp",
+    companyName: "Audio Amp",
     type: "Team",
     category: ["Electronics", "Circuit Design", "Analog Systems", "Power Systems"],
     shortDescription:
@@ -283,11 +283,11 @@ export const Projects: ProjectInterface[] = [
     ],
     startDate: new Date("2025-01-05T12:00:00"),
     endDate: new Date("2025-04-30T12:00:00"),
-    companyLogoImg: "/projects/audio_amp/image.png",
+    companyLogoImg: "/projects/audio_amp.webp",
     descriptionDetails: {
       paragraphs: [
-        "> Designed and analyzed an analog audio amplification system featuring an AC-DC power supply, full bridge rectifier, voltage regulation, and a high-current Darlington transistor amplifier stage.",
-        "> The project explored practical analog electronics concepts including transistor biasing, signal amplification, rectification, filtering, and power delivery through the design and testing of a complete audio amplifier circuit.",
+        "Designed and analyzed an analog audio amplification system featuring an AC-DC power supply, full bridge rectifier, voltage regulation, and a high-current Darlington transistor amplifier stage.",
+        "The project explored practical analog electronics concepts including transistor biasing, signal amplification, rectification, filtering, and power delivery through the design and testing of a complete audio amplifier circuit.",
       ],
       bullets: [
         "Designed an AC-DC power supply using a 10:1 transformer, full bridge rectifier, filtering stages, and voltage regulation circuitry.",

@@ -33,10 +33,11 @@ export default async function Project({ params }: ProjectPageProps) {
         href="/projects"
         className={cn(
           buttonVariants({ variant: "ghost" }),
-          "absolute left-[-200px] top-14 hidden xl:inline-flex"
+          "absolute left-[-200px] top-14 hidden xl:inline-flex items-center gap-2"
         )}
       >
-        {"< all_projects"}
+        <Icons.chevronLeft className="h-4 w-4" />
+        all projects
       </Link>
       <div>
         <time
@@ -102,14 +103,14 @@ export default async function Project({ params }: ProjectPageProps) {
 
       <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
-          $ tech_stack
+          tech stack
         </h2>
         <ChipContainer textArr={project.techStack} />
       </div>
 
       <div className="mb-7 lowercase">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
-          $ description
+          description
         </h2>
         <ProjectDescription
           paragraphs={project.descriptionDetails.paragraphs}
@@ -120,9 +121,13 @@ export default async function Project({ params }: ProjectPageProps) {
       <div className="flex justify-center py-6 lg:py-10">
         <Link
           href="/projects"
-          className={cn(buttonVariants({ variant: "ghost" }))}
+          className={cn(
+            buttonVariants({ variant: "ghost" }),
+            "gap-2"
+          )}
         >
-          $ all_projects
+          <Icons.chevronLeft className="h-4 w-4" />
+          all projects
         </Link>
       </div>
     </article>

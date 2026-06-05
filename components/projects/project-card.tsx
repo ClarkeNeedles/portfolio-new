@@ -13,9 +13,6 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="relative p-6 w-full bg-background border border-border rounded-lg h-full flex flex-col gap-4">
-      <h5 className="text-2xl font-bold tracking-tight text-foreground">
-        {"$ " + project.companyName}
-      </h5>
       <div className="relative w-full h-[200px]">
         <Image
           className="rounded-lg border border-border object-cover"
@@ -25,16 +22,32 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
         />
       </div>
+      <h5 className="text-2xl font-bold tracking-tight text-foreground">
+        {project.companyName}
+      </h5>
       <div className="flex flex-col flex-grow gap-3">
         <p className="line-clamp-3 text-muted-foreground lowercase">
-          {"> " + project.shortDescription}
+          {project.shortDescription}
         </p>
-        <div className="flex gap-2 flex-wrap">
-          <ChipContainer textArr={project.category} />
-        </div>
+        <div className="mt-3 sm:mt-4 flex flex-wrap gap-1">
+            {project.category.slice(0, 2).map((category, index) => (
+              <span
+                key={index}
+                className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-muted-foreground lowercase"
+              >
+                {category}
+              </span>
+            ))}
+            {project.category.length > 2 && (
+              <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-muted-foreground">
+                +{project.category.length - 2} more
+              </span>
+            )}
+          </div>
         <Link href={`/projects/${project.id}`} className="mt-auto">
           <Button variant="default" className="mt-2 w-full sm:w-auto">
-            {"$ read_more"}
+            {"read more"}
+            <Icons.chevronRight className="ml-2 h-4 w-4" />
           </Button>
         </Link>
       </div>

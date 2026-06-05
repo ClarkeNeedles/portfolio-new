@@ -90,7 +90,7 @@ export default async function ExperienceDetailPage({
         <AnimatedSection delay={0.3}>
           <div>
             <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              {"> Role Summary"}
+              {"Role Summary"}
             </h3>
             <ul className="space-y-3 lowercase">
               {experience.description.map((desc, idx) => (
@@ -114,7 +114,7 @@ export default async function ExperienceDetailPage({
         <AnimatedSection delay={0.3}>
           <div>
             <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              {"> Key Achievements"}
+              {"Key Achievements"}
             </h3>
             <ul className="space-y-3 lowercase">
               {experience.achievements.map((achievement, idx) => (
@@ -138,7 +138,7 @@ export default async function ExperienceDetailPage({
         <AnimatedSection delay={0.3}>
           <div>
             <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              {"> Technologies & Skills"}
+              {"Technologies & Skills"}
             </h3>
             <ChipContainer textArr={experience.skills} />
           </div>
@@ -152,7 +152,10 @@ export default async function ExperienceDetailPage({
       <div className="container max-w-4xl mx-auto py-8 px-4">
         <AnimatedSection className="mb-6">
           <Button variant="ghost" size="sm" className="mb-4" asChild>
-            <Link href="/experience">{"< back_to_experiences"}</Link>
+            <Link href="/experience" className="gap-2">
+              <Icons.chevronLeft className="h-4 w-4" />
+              back to experience
+            </Link>
           </Button>
         </AnimatedSection>
 
@@ -218,7 +221,10 @@ export default async function ExperienceDetailPage({
 
         <AnimatedSection delay={0.4} className="flex justify-center mt-8">
           <Button variant="outline" asChild>
-            <Link href="/experience">$ view_all_experiences</Link>
+            <Link href="/experience" className="gap-2">
+              <Icons.chevronLeft className="h-4 w-4" />
+              view all experience
+            </Link>
           </Button>
         </AnimatedSection>
       </div>
