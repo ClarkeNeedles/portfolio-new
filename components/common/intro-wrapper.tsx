@@ -1,12 +1,12 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { cn } from "@/lib/utils"
 
 const bootLogs = [
   "[ OK ] Loading kernel modules...",
   "[ OK ] Initializing portfolio...",
   "[ OK ] Mounting projects...",
+  "[ OK ] System ready",
 ]
 
 export default function IntroWrapper({
@@ -17,12 +17,11 @@ export default function IntroWrapper({
   const [mounted, setMounted] = useState(false)
 
   const [phase, setPhase] = useState<
-    "boot" | "typing" | "waiting" | "exit" | "done"
+    "boot" | "typing" | "waiting" | "done"
   >("boot")
 
   const [logIndex, setLogIndex] = useState(0)
   const [typed, setTyped] = useState("")
-  const [visible, setVisible] = useState(true)
 
   const fullText = "clarke@portfolio:~$ whoami"
 
@@ -35,27 +34,28 @@ export default function IntroWrapper({
     const seen = localStorage.getItem("intro_seen")
     if (seen === "true") {
       setPhase("done")
-      setVisible(false)
       return
     }
 
-    let logTimer: NodeJS.Timeout
+    let timer: NodeJS.Timeout
 
     if (phase === "boot") {
       if (logIndex < bootLogs.length) {
-        logTimer = setTimeout(() => {
-          setLogIndex((prev) => prev + 1)
+        timer = setTimeout(() => {
+          setLogIndex((p) => p + 1)
         }, 700)
       } else {
-        setPhase("typing")
+        timer = setTimeout(() => {
+          setPhase("typing")
+        }, 900)
       }
     }
 
-    return () => clearTimeout(logTimer)
+    return () => clearTimeout(timer)
   }, [phase, logIndex])
 
   // --------------------------
-  // WHOAMI TYPING ANIMATION
+  // TYPING
   // --------------------------
   useEffect(() => {
     if (phase !== "typing") return
@@ -76,7 +76,7 @@ export default function IntroWrapper({
   }, [phase])
 
   // --------------------------
-  // INPUT HANDLING
+  // INPUT
   // --------------------------
   useEffect(() => {
     if (phase !== "waiting") return
@@ -91,14 +91,12 @@ export default function IntroWrapper({
     return () => window.removeEventListener("keydown", handleKey)
   }, [phase])
 
+  // --------------------------
+  // EXIT
+  // --------------------------
   const exitIntro = () => {
-    setPhase("exit")
     localStorage.setItem("intro_seen", "true")
-
-    setTimeout(() => {
-      setVisible(false)
-      setPhase("done")
-    }, 500)
+    setPhase("done")
   }
 
   // --------------------------
@@ -114,7 +112,7 @@ export default function IntroWrapper({
   }, [phase])
 
   // --------------------------
-  // SKIP IF DONE
+  // SKIP
   // --------------------------
   if (!mounted || phase === "done") {
     return <>{children}</>
@@ -124,44 +122,36 @@ export default function IntroWrapper({
     <>
       {children}
 
-      {visible && (
-        <div
-          onClick={() => phase === "waiting" && exitIntro()}
-          className={cn(
-            "fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background font-mono text-primary",
-            "transition-all duration-500 ease-out",
-            phase === "exit"
-              ? "opacity-0 scale-95 blur-sm pointer-events-none"
-              : "opacity-100 scale-100"
-          )}
-        >
-          {/* BOOT LOGS */}
-          {phase === "boot" && (
-            <div className="text-sm md:text-base space-y-1 mb-6 font-mono">
-              {bootLogs.slice(0, logIndex).map((log, i) => (
-                <div key={i}>{log}</div>
-              ))}
-            </div>
-          )}
+      {/* OVERLAY */}
+      <div
+        onClick={() => phase === "waiting" && exitIntro()}
+        className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background font-mono text-primary"
+      >
+        {/* BOOT LOGS */}
+        {phase === "boot" && (
+          <div className="text-sm md:text-base space-y-1 mb-6">
+            {bootLogs.slice(0, logIndex).map((log, i) => (
+              <div key={i}>{log}</div>
+            ))}
+          </div>
+        )}
 
-          {/* WHOAMI */}
-          {phase !== "boot" && (
-            <div className="font-mono text-2xl md:text-4xl">
-              <p>
-                {typed}
-                <span className="cursor">█</span>
+        {/* WHOAMI */}
+        {phase !== "boot" && (
+          <div className="text-2xl md:text-4xl">
+            <p>
+              {typed}
+              <span className="cursor">█</span>
+            </p>
+
+            {phase === "waiting" && (
+              <p className="text-xs text-muted-foreground mt-4">
+                press enter or click anywhere
               </p>
-
-              {/* hint */}
-              {phase === "waiting" && (
-                <p className="text-xs text-muted-foreground mt-4">
-                  press enter or click anywhere
-                </p>
-              )}
-            </div>
-          )}
-        </div>
-      )}
+            )}
+          </div>
+        )}
+      </div>
     </>
   )
 }
