@@ -95,6 +95,7 @@ export type ValidSkills =
   | "PostgreSQL"
   | "JSON"
   | "CMake"
+  | "TypeScript"
 
 export type ValidCategory =
   | "Full Stack"
@@ -135,6 +136,7 @@ export type ValidCategory =
   | "Full Stack"
   | "Database Systems"
   | "Desktop Development"
+  | "Web Development"
 
 export type ValidExpType = "Personal" | "Team"
 

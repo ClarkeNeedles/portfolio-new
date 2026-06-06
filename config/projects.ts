@@ -113,6 +113,40 @@ export const Projects: ProjectInterface[] = [
     }
   },
   {
+    id: "portfolio_new",
+    companyName: "New Portfolio Website",
+    type: "Personal",
+    category: ["Web Development", "Frontend", "Backend", "UI/UX", "Full Stack"],
+    shortDescription:
+      "A modern personal portfolio website built with Next.js and React, featuring dynamic project showcases and a contact system powered by the Resend API.",
+    githubLink: "https://github.com/ClarkeNeedles/portfolio-new",
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Resend API",
+      "Vercel",
+    ],
+    startDate: new Date("2026-04-20T12:00:00"),
+    endDate: new Date("2026-06-06T12:00:00"),
+    companyLogoImg: "/projects/portfolio_new.webp",
+    descriptionDetails: {
+      paragraphs: [
+        "Built a modern, responsive personal portfolio website using Next.js and React, focusing on performance, scalability, and clean UI design.",
+        "Implemented a serverless contact form using the Resend API, enabling reliable email delivery directly from the frontend without requiring a traditional backend.",
+      ],
+
+      bullets: [
+        "Developed reusable React components for projects, navigation, and UI sections to ensure a modular and maintainable codebase.",
+        "Integrated Next.js API routes to securely handle contact form submissions and forward messages via the Resend API.",
+        "Optimized performance using Next.js rendering strategies (SSR/SSG) for fast load times and improved SEO.",
+        "Designed a fully responsive UI with mobile-first principles and consistent visual hierarchy across all sections.",
+        "Deployed the application on Vercel with environment variable support for secure API key management.",
+      ],
+    },
+  },
+  {
     id: "knowledge_transfer_ai",
     companyName: "Knowledge Transfer AI",
     type: "Team",

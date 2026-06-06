@@ -46,7 +46,7 @@ export function ResponsiveTabs({
               <ChevronDown className="h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-full min-w-[200px]">
+          <DropdownMenuContent className="w-full min-w-[200px] bg-background opacity-100 border shadow-lg">
             {items.map((item) => (
               <DropdownMenuItem
                 key={item.value}
