@@ -233,7 +233,7 @@ export const Projects: ProjectInterface[] = [
       "Personal portfolio website built from scratch using HTML, CSS, and JavaScript, featuring a custom contact system powered by the Resend API.",
     websiteLink: "https://clarkeneedles.github.io/portfolio/",
     githubLink: "https://github.com/ClarkeNeedles/portfolio",
-    techStack: ["Javascript", "CSS 3", "HTML 5", "Resend API", "Vercel"],
+    techStack: ["JavaScript", "CSS 3", "HTML 5", "Resend API", "Vercel"],
     startDate: new Date("2025-08-01T12:00:00"),
     endDate: new Date("2025-11-24T12:00:00"),
     companyLogoImg: "/projects/portfolio.webp",
