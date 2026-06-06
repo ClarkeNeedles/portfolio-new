@@ -47,10 +47,10 @@ export default async function Project({ params }: ProjectPageProps) {
           {formatDateFromObj(project.endDate)}
         </time>
         <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
-          <span>
-            {"$ " + project.companyName}
-            <span className="cursor">█</span>
-          </span>
+          <h1 className="font-bold mb-2 whitespace-nowrap text-[clamp(1rem,4vw,1.875rem)]">
+          {"$ " + project.companyName}
+          <span className="cursor inline-block text-[1em] leading-none align-middle">█</span>
+        </h1>
           <div className="flex items-center">
             {project.githubLink && (
               <CustomTooltip text="Link to the source code.">

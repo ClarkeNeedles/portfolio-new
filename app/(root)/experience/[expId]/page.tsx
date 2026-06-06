@@ -177,9 +177,9 @@ export default async function ExperienceDetailPage({
                       </div>
                     )}
                     <div className="flex-1 text-center sm:text-left">
-                      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+                      <h1 className="font-bold mb-2 whitespace-nowrap text-[clamp(1rem,4vw,1.875rem)]">
                         {"$ " + experience.position}
-                        <span className="cursor">█</span>
+                        <span className="cursor inline-block text-[1em] leading-none align-middle">█</span>
                       </h1>
                       <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
                         <span className="text-md font-medium text-muted-foreground">

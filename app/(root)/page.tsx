@@ -143,7 +143,7 @@ export default function IndexPage() {
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <AnimatedText
             as="h2"
-            className="font-heading text-2xl leading-[1.1] sm:text-2xl md:text-5xl"
+            className="font-heading text-2xl leading-[1.1] sm:text-2xl md:text-5xl whitespace-nowrap"
           >
             {"/" + pagesConfig.projects.title + ":~$ "}
             <span className="cursor">█</span>
@@ -179,7 +179,7 @@ export default function IndexPage() {
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <AnimatedText
             as="h2"
-            className="font-heading text-2xl leading-[1.1] sm:text-2xl md:text-5xl"
+            className="font-heading text-2xl leading-[1.1] sm:text-2xl md:text-5xl whitespace-nowrap"
           >
             {"/" + pagesConfig.experience.title + ":~$ "}
             <span className="cursor">█</span>
@@ -212,7 +212,7 @@ export default function IndexPage() {
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <AnimatedText
             as="h2"
-            className="font-heading text-2xl leading-[1.1] sm:text-2xl md:text-5xl"
+            className="font-heading text-2xl leading-[1.1] sm:text-2xl md:text-5xl whitespace-nowrap"
           >
             {"/" + pagesConfig.skills.title + ":~$ "}
             <span className="cursor">█</span>

@@ -138,14 +138,14 @@ export default function IntroWrapper({
 
         {/* WHOAMI */}
         {phase !== "boot" && (
-          <div className="text-2xl md:text-4xl">
-            <p>
+          <div className="whoami font-mono w-full px-4 text-center">
+            <p className="text-base sm:text-xl md:text-3xl lg:text-4xl break-words">
               {typed}
               <span className="cursor">█</span>
             </p>
 
             {phase === "waiting" && (
-              <p className="text-xs text-muted-foreground mt-4">
+              <p className="text-[10px] sm:text-xs text-muted-foreground mt-4">
                 press enter or click anywhere
               </p>
             )}
