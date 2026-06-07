@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Clarke Needles",
   authorName: "Clarke Needles",
   username: "ClarkeNeedles",
-  description: "Computer Engineer focused on firmware, embedded systems, and robotics, with a passion for building reliable, low-level systems.",
+  description: "Clarke Needles is a computer engineer with a passion for firmware, embedded systems, and robotics. With a focus on building reliable, low-level systems, Clarke has experience in C programming, real-time operating systems (RTOS), microcontroller development, and hardware-software integration. Explore Clarke's portfolio to see projects in robotics, autonomous systems, UAV software, computer vision, and more.",
   url: "https://clarkeneedles.com",
   links: {
     linkedin: "https://www.linkedin.com/in/clarke-needles/",

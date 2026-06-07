@@ -84,16 +84,14 @@ export const Projects: ProjectInterface[] = [
     id: "verilog_cpu",
     companyName: "Verilog CPU",
     type: "Team",
-    category: ["Digital Design", "Computer Architecture", "Verilog", "FPGA Design", "RTL Design"],
+    category: [ "RTL Design", "Digital Design", "Computer Architecture", "FPGA Design"],
     shortDescription:
       "A custom CPU designed in Verilog, implementing core computer architecture concepts through RTL design, simulation, and hardware-level system modeling.",
     githubLink: "https://github.com/ClarkeNeedles/Verilog-CPU",
     techStack: [
       "Verilog",
-      "RTL Design",
       "ModelSim",
-      "Digital Logic Design",
-      "Computer Architecture",
+      "Quartus Prime",
     ],
     startDate: new Date("2025-01-01T12:00:00"),
     endDate: new Date("2025-04-04T12:00:00"),
