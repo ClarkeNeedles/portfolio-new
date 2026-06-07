@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Clarke Needles | Computer Engineer",
     short_name: "Clarke Needles",
-    description: "Clarke Needles - Computer Engineer ...",
+    description: "Clarke Needles is a computer engineer with a passion for firmware, embedded systems, and robotics. With a focus on building reliable, low-level systems, Clarke has experience in C programming, real-time operating systems (RTOS), microcontroller development, and hardware-software integration. Explore Clarke's portfolio to see projects in robotics, autonomous systems, UAV software, computer vision, and more.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
@@ -24,9 +24,11 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
     categories: [
       "portfolio",
-      "ai",
+      "firmware",
+      "embedded systems",
+      "robotics",
+      "autonomous systems",
       "software engineering",
-      "machine learning",
       "developer",
       "web development",
     ],

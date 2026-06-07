@@ -73,6 +73,7 @@ export default function SkillsCard({ skills }: SkillsCardProps) {
               {/* DROPDOWN */}
               {skill.projects && skill.projects.length > 0 && (
                 <DropdownMenu
+                  modal={false}
                   open={openSkill === skill.name}
                   onOpenChange={(open) => {
                     setOpenSkill(open ? skill.name : null)
