@@ -133,21 +133,29 @@ export default function IndexPage() {
           <AnimatedText delay={1.2}>
             <Icons.chevronDown className="h-6 w-6 mt-10" />
           </AnimatedText>
-          <AnimatedSection
-            delay={1.4}
-            direction="up"
-            className="w-full max-w-[42rem] mt-12 p-6 border border-muted-foreground/30 bg-black/40 rounded-none text-left"
-          >
-            <p className="text-xs font-mono text-primary mb-2">// background_info.md</p>
-            <p className="text-sm leading-relaxed text-muted-foreground lowercase">
-              computer engineering student specialized in low-level architecture. 
-              experienced in writing firmware for bare-metal microcontrollers, 
-              optimizing hardware peripherals, and prototyping robotics frameworks. 
-              constantly bridging the gap between high-level algorithms and hardware execution.
-            </p>
-          </AnimatedSection>
         </div>
       </section>
+      <AnimatedSection
+        direction="up"
+        className="container py-10 my-14"
+        id="about"
+      >
+        <div className="mx-auto w-full max-w-[58rem] p-8 border border-muted-foreground/30 bg-black rounded-none text-left space-y-4">
+          <div className="flex items-center justify-between border-b border-muted-foreground/20 pb-2">
+            <p className="text-xs font-mono text-primary">// about_me.sys</p>
+            <span className="text-xs text-muted-foreground/50 font-mono">r-x</span>
+          </div>
+          <p className="leading-relaxed text-muted-foreground text-sm sm:text-base lowercase">
+            computer engineering student focused on firmware, embedded systems, and robotics, 
+            with a passion for building reliable, low-level systems. experienced in translating 
+            complex hardware requirements into clean, optimized code.
+          </p>
+          <p className="leading-relaxed text-muted-foreground text-sm sm:text-base lowercase">
+            currently prototyping robotic systems and optimizing hardware-software integration layers 
+            to solve real-world automation challenges.
+          </p>
+        </div>
+      </AnimatedSection>
       <AnimatedSection
         direction="up"
         className="container space-y-6 bg-muted py-10 my-14"
