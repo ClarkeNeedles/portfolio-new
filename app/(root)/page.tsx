@@ -180,7 +180,7 @@ export default function IndexPage() {
             </p>
             <p>
               Right now, I am focusing heavily on embedded systems and hardware interaction. I am currently 
-              working on a RTOS based weather dashboard with custom peripheral drivers (I2C/SPI/UART){" "}
+              working on an RTOS based weather dashboard with custom peripheral drivers (I2C/SPI/UART){" "}
               <Link 
                 href="https://github.com/ClarkeNeedles/freertos-can-telematics" 
                 target="_blank" 
