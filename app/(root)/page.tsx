@@ -146,26 +146,36 @@ export default function IndexPage() {
               <span className="h-2 w-2 rounded-full bg-destructive/60" />
               <span className="h-2 w-2 rounded-full bg-amber-500/60" />
               <span className="h-2 w-2 rounded-full bg-emerald-500/60" />
-              <p className="text-xs font-mono text-muted-foreground ml-2 select-none">// ABOUT.md</p>
+              <p className="text-xs font-mono text-muted-foreground ml-2 select-none">ABOUT.md</p>
             </div>
           </div>
           <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
             <p>
-              I am a computer engineering student at Queen&apos;s University, having just finished 
-              my 3rd year. Currently, I am on a 16-month co-op work term at{" "}
+              I am a Computer Engineering student at Queen's University, currently completing a 16-month co-op 
+              as a Firmware Designer at{" "}
               <Link 
                 href="https://www.semtech.com" 
                 target="_blank" 
-                className="font-medium text-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary transition-colors"
+                className="font-medium text-foreground underline underline-offset-4 decoration-muted-foreground/40 
+                  hover:decoration-primary hover:text-primary transition-colors"
               >
                 Semtech
-              </Link>{" "}
-              working as a Firmware Designer.
+              </Link>{". "}
+              My work focuses heavily on low-level firmware engineering, embedded systems, and hardware-software integration.
             </p>
             <p>
-              Before this, I worked at FUJIFILM Visualsonics, where I engineered automated testing frameworks 
-              and developed features for large-scale biomedical software systems utilizing C, C++, C#, 
-              WinAPI, ATL, and COM objects.
+              Previously, I was at{" "}
+              <Link 
+                href="https://www.visualsonics.com/" 
+                target="_blank" 
+                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
+                  underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
+                  transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
+              >
+                FUJIFILM Visualsonics
+              </Link>{", "}
+              where I engineered automated testing frameworks and developed core features 
+              for large-scale biomedical software systems using C, C++, C#, WinAPI, ATL, and COM objects.
             </p>
             <p>
               Right now, I am focusing heavily on embedded systems and hardware interaction. I am currently 
@@ -173,7 +183,9 @@ export default function IndexPage() {
               <Link 
                 href="https://github.com/ClarkeNeedles/freertos-can-telematics" 
                 target="_blank" 
-                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
+                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
+                  underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
+                  transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
               >
                 freertos-can-telematics
               </Link>{" "}
@@ -181,7 +193,9 @@ export default function IndexPage() {
               <Link 
                 href="https://github.com/ClarkeNeedles/cuda-opengl-fractals" 
                 target="_blank" 
-                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
+                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
+                  underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
+                  transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
               >
                 cuda-opengl-fractals
               </Link>.
