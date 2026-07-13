@@ -140,18 +140,27 @@ export default function IndexPage() {
         className="container py-10 my-14"
         id="about"
       >
-        <div className="w-full p-8 border border-muted-foreground/30 bg-black rounded-none text-left space-y-6">
-          <div className="flex items-center justify-between border-b border-muted-foreground/20 pb-2">
-            <p className="text-xs font-mono text-primary">about</p>
+        <div className="w-full p-5 sm:p-8 border border-border bg-card text-card-foreground rounded-none text-left space-y-6 shadow-sm">
+          <div className="flex items-center justify-between border-b border-border/60 pb-3">
+            <div className="flex items-center space-x-2">
+              <span className="h-2 w-2 rounded-full bg-destructive/60" />
+              <span className="h-2 w-2 rounded-full bg-amber-500/60" />
+              <span className="h-2 w-2 rounded-full bg-emerald-500/60" />
+              <p className="text-xs font-mono text-muted-foreground ml-2 select-none">// ABOUT.md</p>
+            </div>
           </div>
-          <div className="space-y-4 text-sm sm:text-base text-muted-foreground lowercase leading-relaxed">
+          <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
             <p>
-              I am a computer engineering student at queen&apos;s university, having just finished 
+              I am a computer engineering student at Queen&apos;s University, having just finished 
               my 3rd year. Currently, I am on a 16-month co-op work term at{" "}
-              <Link href="https://www.semtech.com" target="_blank" className="text-white underline underline-offset-4 hover:text-primary">
-                semtech
+              <Link 
+                href="https://www.semtech.com" 
+                target="_blank" 
+                className="font-medium text-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary transition-colors"
+              >
+                Semtech
               </Link>{" "}
-              working as a firmware designer.
+              working as a Firmware Designer.
             </p>
             <p>
               Before this, I worked at FUJIFILM Visualsonics, where I engineered automated testing frameworks 
@@ -160,14 +169,20 @@ export default function IndexPage() {
             </p>
             <p>
               Right now, I am focusing heavily on embedded systems and hardware interaction. I am currently 
-              working on a custom RTOS telematic node via{" "}
-              <Link href="https://github.com/ClarkeNeedles/freertos-can-telematics" target="_blank" 
-                className="text-white underline underline-offset-4 hover:text-primary">
+              working on a custom RTOS weather dashboard with custom peripheral drivers (I2C/SPI/UART){" "}
+              <Link 
+                href="https://github.com/ClarkeNeedles/freertos-can-telematics" 
+                target="_blank" 
+                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
+              >
                 freertos-can-telematics
               </Link>{" "}
-              and a parallel computing visualization tool built with{" "}
-              <Link href="https://github.com/ClarkeNeedles/cuda-opengl-fractals" target="_blank" 
-                className="text-white underline underline-offset-4 hover:text-primary">
+              and a CUDA-OpenGL fractal generator that acts as a GPU vs. CPU benchmark{" "}
+              <Link 
+                href="https://github.com/ClarkeNeedles/cuda-opengl-fractals" 
+                target="_blank" 
+                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
+              >
                 cuda-opengl-fractals
               </Link>.
             </p>
