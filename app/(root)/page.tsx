@@ -143,10 +143,10 @@ export default function IndexPage() {
         <div className="w-full p-5 sm:p-8 border border-border bg-card text-card-foreground rounded-none text-left space-y-6 shadow-sm">
           <div className="flex items-center justify-between border-b border-border/60 pb-3">
             <div className="flex items-center space-x-2">
-              <span className="h-2 w-2 rounded-full bg-destructive/60" />
-              <span className="h-2 w-2 rounded-full bg-amber-500/60" />
-              <span className="h-2 w-2 rounded-full bg-emerald-500/60" />
-              <p className="text-xs font-mono text-muted-foreground ml-2 select-none">ABOUT.md</p>
+            <span className="h-2 w-2 rounded-full bg-rose-500/70" />
+            <span className="h-2 w-2 rounded-full bg-amber-500/70" />
+            <span className="h-2 w-2 rounded-full bg-emerald-500/70" />
+              <p className="text-xs font-mono text-muted-foreground ml-2 select-none">README.md</p>
             </div>
           </div>
           <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
