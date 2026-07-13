@@ -156,8 +156,9 @@ export default function IndexPage() {
               <Link 
                 href="https://www.semtech.com" 
                 target="_blank" 
-                className="font-medium text-foreground underline underline-offset-4 decoration-muted-foreground/40 
-                  hover:decoration-primary hover:text-primary transition-colors"
+                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
+                  underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
+                  transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
               >
                 Semtech
               </Link>{". "}
@@ -172,14 +173,14 @@ export default function IndexPage() {
                   underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
                   transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
               >
-                FUJIFILM Visualsonics
+                FUJIFILM VisualSonics
               </Link>{", "}
               where I engineered automated testing frameworks and developed core features 
               for large-scale biomedical software systems using C, C++, C#, WinAPI, ATL, and COM objects.
             </p>
             <p>
               Right now, I am focusing heavily on embedded systems and hardware interaction. I am currently 
-              working on a custom RTOS weather dashboard with custom peripheral drivers (I2C/SPI/UART){" "}
+              working on a RTOS based weather dashboard with custom peripheral drivers (I2C/SPI/UART){" "}
               <Link 
                 href="https://github.com/ClarkeNeedles/freertos-can-telematics" 
                 target="_blank" 
