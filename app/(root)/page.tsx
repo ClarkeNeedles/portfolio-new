@@ -140,20 +140,38 @@ export default function IndexPage() {
         className="container py-10 my-14"
         id="about"
       >
-        <div className="mx-auto w-full max-w-[58rem] p-8 border border-muted-foreground/30 bg-black rounded-none text-left space-y-4">
+        <div className="w-full p-8 border border-muted-foreground/30 bg-black rounded-none text-left space-y-6">
           <div className="flex items-center justify-between border-b border-muted-foreground/20 pb-2">
-            <p className="text-xs font-mono text-primary">// about_me.sys</p>
-            <span className="text-xs text-muted-foreground/50 font-mono">r-x</span>
+            <p className="text-xs font-mono text-primary">about</p>
           </div>
-          <p className="leading-relaxed text-muted-foreground text-sm sm:text-base lowercase">
-            computer engineering student focused on firmware, embedded systems, and robotics, 
-            with a passion for building reliable, low-level systems. experienced in translating 
-            complex hardware requirements into clean, optimized code.
-          </p>
-          <p className="leading-relaxed text-muted-foreground text-sm sm:text-base lowercase">
-            currently prototyping robotic systems and optimizing hardware-software integration layers 
-            to solve real-world automation challenges.
-          </p>
+          <div className="space-y-4 text-sm sm:text-base text-muted-foreground lowercase leading-relaxed">
+            <p>
+              I am a computer engineering student at queen&apos;s university, having just finished 
+              my 3rd year. Currently, I am on a 16-month co-op work term at{" "}
+              <Link href="https://www.semtech.com" target="_blank" className="text-white underline underline-offset-4 hover:text-primary">
+                semtech
+              </Link>{" "}
+              working as a firmware designer.
+            </p>
+            <p>
+              Before this, I worked at FUJIFILM Visualsonics, where I engineered automated testing frameworks 
+              and developed features for large-scale biomedical software systems utilizing C, C++, C#, 
+              WinAPI, ATL, and COM objects.
+            </p>
+            <p>
+              Right now, I am focusing heavily on embedded systems and hardware interaction. I am currently 
+              working on a custom RTOS telematic node via{" "}
+              <Link href="https://github.com/ClarkeNeedles/freertos-can-telematics" target="_blank" 
+                className="text-white underline underline-offset-4 hover:text-primary">
+                freertos-can-telematics
+              </Link>{" "}
+              and a parallel computing visualization tool built with{" "}
+              <Link href="https://github.com/ClarkeNeedles/cuda-opengl-fractals" target="_blank" 
+                className="text-white underline underline-offset-4 hover:text-primary">
+                cuda-opengl-fractals
+              </Link>.
+            </p>
+          </div>
         </div>
       </AnimatedSection>
       <AnimatedSection
