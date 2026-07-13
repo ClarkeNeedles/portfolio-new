@@ -36,7 +36,7 @@ export default function IndexPage() {
     image: siteConfig.ogImage,
     jobTitle: "Computer Engineering Student",
     description:
-      "Software engineer focused on embedded systems, firmware, robotics, and full-stack development.",
+      "Computer engineer focused on embedded systems, firmware, robotics, and full-stack development.",
     sameAs: [
       siteConfig.links.github,
       siteConfig.links.linkedin,
@@ -133,6 +133,19 @@ export default function IndexPage() {
           <AnimatedText delay={1.2}>
             <Icons.chevronDown className="h-6 w-6 mt-10" />
           </AnimatedText>
+          <AnimatedSection
+            delay={1.4}
+            direction="up"
+            className="w-full max-w-[42rem] mt-12 p-6 border border-muted-foreground/30 bg-black/40 rounded-none text-left"
+          >
+            <p className="text-xs font-mono text-primary mb-2">// background_info.md</p>
+            <p className="text-sm leading-relaxed text-muted-foreground lowercase">
+              computer engineering student specialized in low-level architecture. 
+              experienced in writing firmware for bare-metal microcontrollers, 
+              optimizing hardware peripherals, and prototyping robotics frameworks. 
+              constantly bridging the gap between high-level algorithms and hardware execution.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
       <AnimatedSection

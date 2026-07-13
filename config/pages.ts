@@ -30,7 +30,7 @@ export const pagesConfig: PagesConfig = {
     title: "projects",
     metadata: {
       title: "Projects",
-      description: "Clarke Needles' projects in building web applications.",
+      description: "Clarke Needles' projects in building embedded applications.",
     },
   },
   contact: {
