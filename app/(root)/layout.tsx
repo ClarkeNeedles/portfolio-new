@@ -3,7 +3,6 @@ import { MainNav } from "@/components/common/main-nav"
 import { ModeToggle } from "@/components/common/mode-toggle"
 import { SiteFooter } from "@/components/common/site-footer"
 import { routesConfig } from "@/config/routes"
-import { ScrollToTop } from "@/components/common/scroll-to-top";
 
 interface RootLayoutProps {
   children: React.ReactNode
