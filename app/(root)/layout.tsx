@@ -12,15 +12,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <IntroWrapper>
       <div className="flex min-h-screen flex-col">
-        <header className="container z-50 bg-background">
-          <div className="flex h-20 items-center justify-between py-6">
+        <header className="fixed top-0 left-0 right-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
+          <div className="container flex h-20 items-center justify-between py-6">
             <MainNav items={routesConfig.mainNav}></MainNav>
             <nav className="flex items-center gap-5">
               <ModeToggle />
             </nav>
           </div>
         </header>
-        <main className="container flex-1">{children}</main>
+        <main className="container flex-1 pt-20">{children}</main>
         <SiteFooter />
       </div>
     </IntroWrapper>
