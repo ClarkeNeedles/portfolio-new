@@ -41,13 +41,10 @@ export function MainNav({ items, children }: MainNavProps) {
   const pathname = usePathname()
   const router = useRouter()
 
-  // Clean transition watcher
+  // Only clear the mobile menu state when the URL path actually changes
   React.useEffect(() => {
-    // Only close the mobile menu if it's currently open when a pathname change is detected
-    if (showMobileMenu) {
-      setShowMobileMenu(false)
-    }
-  }, [pathname, showMobileMenu])
+    setShowMobileMenu(false)
+  }, [pathname])
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (pathname === href) {
