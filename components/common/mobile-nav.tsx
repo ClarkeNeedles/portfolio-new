@@ -19,31 +19,16 @@ const pressStart2P = Press_Start_2P({
 
 export function useLockBody() {
   React.useLayoutEffect(() => {
-    const scrollY = window.scrollY
-
-    // lock scroll
-    document.body.style.position = "fixed"
-    document.body.style.top = `-${scrollY}px`
-    document.body.style.left = "0"
-    document.body.style.right = "0"
-    document.body.style.width = "100%"
-
-    document.documentElement.style.overflow = "hidden"
+    // Simply hide the overflow to stop user scrolling cleanly
+    document.documentElement.classList.add("overflow-hidden");
+    document.body.classList.add("overflow-hidden");
 
     return () => {
-      // restore styles
-      document.body.style.position = ""
-      document.body.style.top = ""
-      document.body.style.left = ""
-      document.body.style.right = ""
-      document.body.style.width = ""
-
-      document.documentElement.style.overflow = ""
-
-      // restore scroll position
-      window.scrollTo(0, scrollY)
-    }
-  }, [])
+      // Clean up classes when mobile-nav unmounts
+      document.documentElement.classList.remove("overflow-hidden");
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, []);
 }
 
 export function MobileNav({ items, children }: MobileNavProps) {
@@ -53,12 +38,16 @@ export function MobileNav({ items, children }: MobileNavProps) {
 
   // Custom click handler to force a scroll-to-top and layout refresh on identical paths
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    document.documentElement.classList.remove("overflow-hidden");
+    document.body.classList.remove("overflow-hidden");
+
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+
     if (pathname === href) {
-      e.preventDefault()
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
-      router.refresh()
+      e.preventDefault();
+      router.refresh();
     }
-  }
+  };
 
   return (
     <div
