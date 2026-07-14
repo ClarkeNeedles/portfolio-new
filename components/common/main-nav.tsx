@@ -112,7 +112,12 @@ export function MainNav({ items, children }: MainNavProps) {
         <span className="font-bold">Menu</span>
       </motion.button>
       {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
+        <MobileNav 
+          items={items} 
+          onClose={() => setShowMobileMenu(false)}
+        >
+          {children}
+        </MobileNav>
       )}
     </div>
   )

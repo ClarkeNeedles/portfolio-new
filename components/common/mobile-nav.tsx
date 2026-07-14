@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 interface MobileNavProps {
   items: any[]
   children?: React.ReactNode
+  onClose: () => void
 }
 
 const pressStart2P = Press_Start_2P({
@@ -31,23 +32,25 @@ export function useLockBody() {
   }, []);
 }
 
-export function MobileNav({ items, children }: MobileNavProps) {
+export function MobileNav({ items, children, onClose }: MobileNavProps) {
   useLockBody()
   const pathname = usePathname()
   const router = useRouter()
 
   // Custom click handler to force a scroll-to-top and layout refresh on identical paths
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    document.documentElement.classList.remove("overflow-hidden");
-    document.body.classList.remove("overflow-hidden");
+    document.documentElement.classList.remove("overflow-hidden")
+    document.body.classList.remove("overflow-hidden")
 
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+
+    onClose()
 
     if (pathname === href) {
-      e.preventDefault();
-      router.refresh();
+      e.preventDefault()
+      router.refresh()
     }
-  };
+  }
 
   return (
     <div
