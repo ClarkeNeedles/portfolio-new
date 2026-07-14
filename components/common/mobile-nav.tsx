@@ -36,19 +36,13 @@ export function MobileNav({ items, children, onClose }: MobileNavProps) {
   const router = useRouter()
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // Close the mobile drawer menu first
+    // Always close the menu immediately when any item is tapped
     onClose()
 
-    // Same page reset
     if (pathname === href) {
+      // If clicking the current page, block standard navigation routing
+      // and let the menu close naturally without forcing any layout shifts
       e.preventDefault()
-      
-      // Manually remove lock classes immediately since standard page routing won't unmount this component
-      document.documentElement.classList.remove("overflow-hidden")
-      document.body.classList.remove("overflow-hidden")
-      
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
-      router.refresh()
     }
   }
 
