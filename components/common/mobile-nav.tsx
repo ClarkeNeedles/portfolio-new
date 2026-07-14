@@ -51,24 +51,23 @@ export function MobileNav({ items, children }: MobileNavProps) {
   return (
     <div
       className={cn(
-        "fixed inset-x-0 bottom-0 top-14 z-50 md:hidden",
-        "overflow-auto p-6 pb-32",
-        "bg-black/40 backdrop-blur-sm"
+        "fixed inset-x-0 bottom-0 top-20 z-50 md:hidden",
+        "overflow-y-auto bg-background p-6 border-t border-border/40 shadow-xl"
       )}
     >
-      <div className="relative z-20 grid gap-6 rounded-md bg-background p-4 text-foreground shadow-lg border border-border">
-        <Link href="/" className="flex items-center space-x-2 lowercase">
-          <span className={cn(pressStart2P.className, "text-sm")}>
+      <div className="relative z-20 flex flex-col space-y-6 text-foreground">
+        <Link href="/" className="flex items-center space-x-2 lowercase border-b border-border/40 pb-4">
+          <span className={cn(pressStart2P.className, "text-xs tracking-tight")}>
             {siteConfig.authorName}
           </span>
         </Link>
-        <nav className="grid grid-flow-row auto-rows-max text-sm">
+        <nav className="flex flex-col space-y-4 text-sm font-medium">
           {items.map((item, index) => (
             <Link
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-                "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline lowercase",
+                "flex w-full items-center p-2 text-base hover:text-primary transition-colors lowercase",
                 item.disabled && "cursor-not-allowed opacity-60"
               )}
             >
@@ -76,7 +75,8 @@ export function MobileNav({ items, children }: MobileNavProps) {
             </Link>
           ))}
         </nav>
-        {children ? <div className="pt-2">{children}</div> : null}
+        
+        {children ? (<div className="pt-4 border-t border-border/40">{children}</div>) : null}
       </div>
     </div>
   )
