@@ -1,19 +1,22 @@
-"use client";
+"use client"
 
-import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { usePathname } from "next/navigation"
+import { useEffect } from "react"
 
 export function ScrollToTop() {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   useEffect(() => {
-    // Snap the window position immediately to the top left
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "instant", // Stops transitions from smoothly drifting downward
-    });
-  }, [pathname]);
+    // requestAnimationFrame waits for Next.js to swap the components 
+    // before instantly snapping the screen to the top layer.
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant"
+      })
+    })
+  }, [pathname])
 
-  return null;
+  return null
 }

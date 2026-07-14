@@ -42,12 +42,11 @@ export function MobileNav({ items, children, onClose }: MobileNavProps) {
     document.documentElement.classList.remove("overflow-hidden")
     document.body.classList.remove("overflow-hidden")
 
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" })
-
-    onClose()
-
+    if (onClose) onClose()
+g
     if (pathname === href) {
       e.preventDefault()
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) // Smooth scroll up since we are staying on page
       router.refresh()
     }
   }
