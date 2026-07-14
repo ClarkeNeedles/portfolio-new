@@ -46,10 +46,11 @@ export function MobileNav({ items, children, onClose }: MobileNavProps) {
 
     if (pathname === href) {
       e.preventDefault()
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) // Smooth scroll up since we are staying on page
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) // Smooth drift since page stays active
       router.refresh()
     }
   }
+
 
   return (
     <div
