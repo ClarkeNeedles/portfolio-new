@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 
+import { AboutBox } from "@/components/common/about-box";
 import { AnimatedSection } from "@/components/common/animated-section"
 import { AnimatedText } from "@/components/common/animated-text"
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper"
@@ -135,96 +136,8 @@ export default function IndexPage() {
           </AnimatedText>
         </div>
       </section>
-      <AnimatedSection
-        direction="up"
-        className="container py-10 my-14"
-        id="about"
-      >
-        <div className="w-full p-5 sm:p-8 border border-border bg-card text-card-foreground rounded-none text-left space-y-6 shadow-sm">
-          <div className="flex items-center justify-between border-b border-border/60 pb-3">
-            <div className="flex items-center space-x-2">
-            <span className="h-2 w-2 rounded-full bg-rose-500/70" />
-            <span className="h-2 w-2 rounded-full bg-amber-500/70" />
-            <span className="h-2 w-2 rounded-full bg-emerald-500/70" />
-              <p className="text-xs font-mono text-muted-foreground ml-2 select-none">README.md</p>
-            </div>
-          </div>
-          <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
-            <p>
-              I am a Computer Engineering student at{" "}
-              <Link 
-                href="https://queensu.ca" 
-                target="_blank" 
-                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
-                  underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
-                  transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
-              >
-                Queen's University
-              </Link>{", "}
-              currently completing a 16-month co-op as a Firmware Designer at{" "}
-              <Link 
-                href="https://clarkeneedles.com/experience/semtech_firmware" 
-                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
-                  underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
-                  transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
-              >
-                Semtech
-              </Link>{". "}
-              My work focuses heavily on low-level firmware engineering, embedded systems, and hardware-software integration.
-            </p>
-            <p>
-              On campus, I build autonomy frameworks for the{" "}
-              <Link 
-                href="https://clarkeneedles.com/experience/qadt_autonomy" 
-                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
-                  underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
-                  transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
-              >
-                Queen's Aerospace Design Team (QADT)
-              </Link>{" "}
-              where I implement ROS2 nodes, Nav2 localization stacks, SLAM mapping, and PX4 flight controls for autonomous UAVs. 
-            </p>
-            <p>
-              Parallel to this, I served as a Project Manager leading first-year engineering teams through the system design and iterative implementation of a carbon footprint tracking application. In this role, I owned timeline management, client communication, and mentored junior cohorts on software architecture and stack selection.
-            </p>
-            <p>
-              Previously, I was at{" "}
-              <Link 
-                href="https://clarkeneedles.com/experience/fujifilm_software"
-                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
-                  underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
-                  transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
-              >
-                FUJIFILM VisualSonics
-              </Link>{", "}
-              where I engineered automated testing frameworks and developed core features 
-              for large-scale biomedical software systems using C, C++, C#, WinAPI, ATL, and COM objects.
-            </p>
-            <p>
-              Right now, I am focusing heavily on embedded systems and hardware interaction. I am currently 
-              working on an RTOS based weather dashboard with custom peripheral drivers (I2C/SPI/UART){" "}
-              <Link 
-                href="https://github.com/ClarkeNeedles/freertos-can-telematics" 
-                target="_blank" 
-                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
-                  underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
-                  transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
-              >
-                freertos-can-telematics
-              </Link>{" "}
-              and a CUDA-OpenGL fractal generator that acts as a GPU vs. CPU benchmark{" "}
-              <Link 
-                href="https://github.com/ClarkeNeedles/cuda-opengl-fractals" 
-                target="_blank" 
-                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
-                  underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
-                  transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
-              >
-                cuda-opengl-fractals
-              </Link>.
-            </p>
-          </div>
-        </div>
+      <AnimatedSection direction="up" className="container py-10 my-14" id="about">
+        <AboutBox />
       </AnimatedSection>
       <AnimatedSection
         direction="up"
