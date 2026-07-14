@@ -151,11 +151,19 @@ export default function IndexPage() {
           </div>
           <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
             <p>
-              I am a Computer Engineering student at Queen's University, currently completing a 16-month co-op 
-              as a Firmware Designer at{" "}
+              I am a Computer Engineering student at{" "}
               <Link 
-                href="https://www.semtech.com" 
+                href="https://queensu.ca" 
                 target="_blank" 
+                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
+                  underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
+                  transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
+              >
+                Queen's University
+              </Link>{", "}
+              currently completing a 16-month co-op as a Firmware Designer at{" "}
+              <Link 
+                href="https://clarkeneedles.com/experience/semtech_firmware" 
                 className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
                   underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
                   transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
@@ -165,10 +173,24 @@ export default function IndexPage() {
               My work focuses heavily on low-level firmware engineering, embedded systems, and hardware-software integration.
             </p>
             <p>
+              On campus, I build autonomy frameworks for the{" "}
+              <Link 
+                href="https://clarkeneedles.com/experience/qadt_autonomy" 
+                className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
+                  underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
+                  transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
+              >
+                Queen's Aerospace Design Team (QADT)
+              </Link>{" "}
+              where I implement ROS2 nodes, Nav2 localization stacks, SLAM mapping, and PX4 flight controls for autonomous UAVs. 
+            </p>
+            <p>
+              Parallel to this, I served as a Project Manager leading first-year engineering teams through the system design and iterative implementation of a carbon footprint tracking application. In this role, I owned timeline management, client communication, and mentored junior cohorts on software architecture and stack selection.
+            </p>
+            <p>
               Previously, I was at{" "}
               <Link 
-                href="https://www.visualsonics.com/" 
-                target="_blank" 
+                href="https://clarkeneedles.com/experience/fujifilm_software"
                 className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline 
                   underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
                   transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none"
