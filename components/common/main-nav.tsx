@@ -22,6 +22,7 @@ const pressStart2P = Press_Start_2P({
   variable: "--font-press-start-2p",
 })
 
+// Animation variants for the navigation items
 const navItemVariants = {
   hidden: { opacity: 0, y: -20 },
   visible: (i: number) => ({
@@ -41,11 +42,11 @@ export function MainNav({ items, children }: MainNavProps) {
   const pathname = usePathname()
   const router = useRouter()
 
-  // Only clear the mobile menu state when the URL path actually changes
   React.useEffect(() => {
     setShowMobileMenu(false)
   }, [pathname])
 
+  // Custom click handler to force a scroll-to-top and layout refresh on identical paths
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (pathname === href) {
       e.preventDefault()

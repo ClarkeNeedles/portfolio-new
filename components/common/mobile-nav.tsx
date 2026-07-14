@@ -1,6 +1,6 @@
 import { Press_Start_2P } from "next/font/google"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import * as React from "react"
 
 import { siteConfig } from "@/config/site"
@@ -19,9 +19,7 @@ const pressStart2P = Press_Start_2P({
 })
 
 export function useLockBody() {
-  React.useEffect(() => {
-    // Using useEffect instead of useLayoutEffect gives Next.js routing threads 
-    // breathing room to prepare the DOM before locking the screen dimensions.
+  React.useLayoutEffect(() => {
     document.documentElement.classList.add("overflow-hidden");
     document.body.classList.add("overflow-hidden");
 
@@ -35,18 +33,17 @@ export function useLockBody() {
 export function MobileNav({ items, children, onClose }: MobileNavProps) {
   useLockBody()
   const pathname = usePathname()
+  const router = useRouter()
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (pathname === href) {
-      e.preventDefault()
-      // Manually clear locks for same-page actions since an unmount won't happen
-      document.documentElement.classList.remove("overflow-hidden")
-      document.body.classList.remove("overflow-hidden")
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
-    }
-    
-    // Always call onClose to let the parent unmount this cleanly
+    // Always close the menu immediately when any item is tapped
     onClose()
+
+    if (pathname === href) {
+      // If clicking the current page, block standard navigation routing
+      // and let the menu close naturally without forcing any layout shifts
+      e.preventDefault()
+    }
   }
 
   return (
@@ -62,7 +59,6 @@ export function MobileNav({ items, children, onClose }: MobileNavProps) {
           <Link 
             href="/" 
             onClick={(e) => handleNavClick(e, "/")}
-            scroll={false} // Stops mobile engine from pre-scrolling prior to route swap
             className="flex items-center space-x-2 lowercase border-b border-border/40 pb-4"
           >
             <span className={cn(pressStart2P.className, "text-xs tracking-tight")}>
@@ -76,7 +72,6 @@ export function MobileNav({ items, children, onClose }: MobileNavProps) {
                 key={index}
                 href={item.disabled ? "#" : item.href}
                 onClick={(e) => !item.disabled && handleNavClick(e, item.href)}
-                scroll={false} // Essential for mobile: blocks coordinate recalculations mid-transition
                 className={cn(
                   "flex w-full items-center py-1 text-lg hover:text-primary transition-colors lowercase",
                   item.disabled && "cursor-not-allowed opacity-60"
