@@ -20,12 +20,10 @@ const pressStart2P = Press_Start_2P({
 
 export function useLockBody() {
   React.useLayoutEffect(() => {
-    // Simply hide the overflow to stop user scrolling cleanly
     document.documentElement.classList.add("overflow-hidden");
     document.body.classList.add("overflow-hidden");
 
     return () => {
-      // Clean up classes when mobile-nav unmounts
       document.documentElement.classList.remove("overflow-hidden");
       document.body.classList.remove("overflow-hidden");
     };
@@ -37,16 +35,19 @@ export function MobileNav({ items, children, onClose }: MobileNavProps) {
   const pathname = usePathname()
   const router = useRouter()
 
-  // Custom click handler to force a scroll-to-top and layout refresh on identical paths
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    document.documentElement.classList.remove("overflow-hidden")
-    document.body.classList.remove("overflow-hidden")
-
+    // Close the mobile drawer menu first
     onClose()
 
+    // Same page reset
     if (pathname === href) {
       e.preventDefault()
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) // Smooth drift back up
+      
+      // Manually remove lock classes immediately since standard page routing won't unmount this component
+      document.documentElement.classList.remove("overflow-hidden")
+      document.body.classList.remove("overflow-hidden")
+      
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
       router.refresh()
     }
   }
