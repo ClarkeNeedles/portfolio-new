@@ -7,15 +7,16 @@ export function ScrollToTop() {
   const pathname = usePathname()
 
   useEffect(() => {
-    // requestAnimationFrame waits for Next.js to swap the components 
-    // before instantly snapping the screen to the top layer.
-    requestAnimationFrame(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "instant"
-      })
-    })
+    // A setTimeout push makes this execute at the end of the event loop macro-task queue,
+    // guaranteeing that Next.js completes the component unmount/mount swap FIRST.
+    const timer = setTimeout(() => {
+      // Direct hardware scroll override
+      window.scrollTo(0, 0)
+      if (document.body) document.body.scrollTop = 0
+      if (document.documentElement) document.documentElement.scrollTop = 0
+    }, 0)
+
+    return () => clearTimeout(timer)
   }, [pathname])
 
   return null

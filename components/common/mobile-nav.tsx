@@ -64,6 +64,7 @@ export function MobileNav({ items, children, onClose }: MobileNavProps) {
           <Link 
             href="/" 
             onClick={(e) => handleNavClick(e, "/")}
+            scroll={false}
             className="flex items-center space-x-2 lowercase border-b border-border/40 pb-4"
           >
             <span className={cn(pressStart2P.className, "text-xs tracking-tight")}>
@@ -77,6 +78,7 @@ export function MobileNav({ items, children, onClose }: MobileNavProps) {
                 key={index}
                 href={item.disabled ? "#" : item.href}
                 onClick={(e) => !item.disabled && handleNavClick(e, item.href)}
+                scroll={false}
                 className={cn(
                   "flex w-full items-center py-1 text-lg hover:text-primary transition-colors lowercase",
                   item.disabled && "cursor-not-allowed opacity-60"
