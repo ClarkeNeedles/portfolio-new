@@ -1,5 +1,6 @@
 import { Press_Start_2P } from "next/font/google"
 import Link from "next/link"
+import { usePathname, useRouter } from "next/navigation"
 import * as React from "react"
 
 import { siteConfig } from "@/config/site"
@@ -47,6 +48,17 @@ export function useLockBody() {
 
 export function MobileNav({ items, children }: MobileNavProps) {
   useLockBody()
+  const pathname = usePathname()
+  const router = useRouter()
+
+  // Custom click handler to force a scroll-to-top and layout refresh on identical paths
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (pathname === href) {
+      e.preventDefault()
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+      router.refresh()
+    }
+  }
 
   return (
     <div
@@ -58,7 +70,11 @@ export function MobileNav({ items, children }: MobileNavProps) {
     >
       <div className="relative z-20 flex flex-col h-full text-foreground justify-between">
         <div className="space-y-8">
-          <Link href="/" className="flex items-center space-x-2 lowercase border-b border-border/40 pb-4">
+          <Link 
+            href="/" 
+            onClick={(e) => handleNavClick(e, "/")}
+            className="flex items-center space-x-2 lowercase border-b border-border/40 pb-4"
+          >
             <span className={cn(pressStart2P.className, "text-xs tracking-tight")}>
               {siteConfig.authorName}
             </span>
@@ -69,6 +85,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
               <Link
                 key={index}
                 href={item.disabled ? "#" : item.href}
+                onClick={(e) => !item.disabled && handleNavClick(e, item.href)}
                 className={cn(
                   "flex w-full items-center py-1 text-lg hover:text-primary transition-colors lowercase",
                   item.disabled && "cursor-not-allowed opacity-60"

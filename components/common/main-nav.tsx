@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Press_Start_2P } from "next/font/google"
 import Link from "next/link"
-import { usePathname, useSelectedLayoutSegment } from "next/navigation"
+import { usePathname, useSelectedLayoutSegment, useRouter } from "next/navigation"
 import * as React from "react"
 
 import { Icons } from "@/components/common/icons"
@@ -40,10 +40,21 @@ export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment()
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
   const pathname = usePathname()
+  const router = useRouter()
 
   React.useEffect(() => {
     setShowMobileMenu(false)
   }, [pathname])
+
+  // Custom click handler to force a scroll-to-top and layout refresh on identical paths
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (pathname === href) {
+      e.preventDefault()
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+      router.refresh()
+      setShowMobileMenu(false)
+    }
+  }
 
   return (
     <div className="flex gap-6 md:gap-10">
@@ -54,6 +65,7 @@ export function MainNav({ items, children }: MainNavProps) {
       >
         <Link
           href="/"
+          onClick={(e) => handleNavClick(e, "/")}
           className="hidden items-center space-x-2 md:flex lowercase"
         >
           <span className={cn(pressStart2P.className, "text-sm")}>
@@ -75,6 +87,7 @@ export function MainNav({ items, children }: MainNavProps) {
             >
               <Link
                 href={item.disabled ? "#" : item.href}
+                onClick={(e) => !item.disabled && handleNavClick(e, item.href)}
                 className={cn(
                   "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm lowercase",
                   item.href.startsWith(`/${segment}`)
