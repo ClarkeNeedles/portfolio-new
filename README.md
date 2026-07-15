@@ -1,6 +1,6 @@
 # 🚀 Portfolio Website (Next.js)
 
-> 💡 **SEO Optimization Notice:** For full documentation on how this project ranks #1 on search engines for its owner, please reference the [SEO-GUIDE.md](./SEO-GUIDE.md) located in the project's root folder.
+> 💡 **SEO Optimization Notice:** For full documentation on how this project ranks #1 on search engines for its owner, please reference the [SEO-TIPS.md](./SEO-TIPS.md) located in the project's root folder.
 
 A modern, highly interactive personal portfolio styled with a sleek, developer-focused **terminal theme**. Built using **Next.js** and **React**, it cleanly showcases low-level engineering projects, skills, and professional experience. The site includes a fully functional terminal contact form subsystem powered by the **Resend API**, enabling seamless email communication.
 
