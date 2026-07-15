@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <Image
           className="rounded-lg border border-border object-cover"
           src={project.companyLogoImg}
-          alt="img"
+          alt={`Clarke Needles Engineering Project - ${project.companyName} built with ${project.techStack.slice(0, 3).join(", ")}`}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
         />

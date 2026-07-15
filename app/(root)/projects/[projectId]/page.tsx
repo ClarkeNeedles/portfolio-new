@@ -95,7 +95,7 @@ export default async function Project({ params }: ProjectPageProps) {
       <div className="my-8 relative aspect-video w-full overflow-hidden rounded-md border bg-muted">
         <Image
           src={project.companyLogoImg}
-          alt={project.companyName}
+          alt={`Clarke Needles Engineering Project - ${project.companyName} built with ${project.techStack.slice(0, 3).join(", ")}`}
           fill
           sizes="(max-width: 768px) 100vw, 768px"
           className="object-cover"

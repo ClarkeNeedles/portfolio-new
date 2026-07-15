@@ -24,18 +24,34 @@ export function AboutBox() {
         <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
           <p>
             I am a Computer Engineering student at{" "}
-            <Link href="https://queensu.ca" target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
+            <Link href="https://queensu.ca" 
+              target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground
+              underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary
+              transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
               Queen's University
+            </Link>{" "}
+            and a varsity student-athlete on the{" "}
+            <Link href="https://gogaelsgo.com" 
+              target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground
+              underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary
+              transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
+              Queen's Baseball team
             </Link>{", "}
             currently completing a 16-month co-op as a Firmware Designer at{" "}
-            <Link href="https://semtech.com" target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
+            <Link href="https://semtech.com" 
+              target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground 
+              underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
+              transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
               Semtech
             </Link>{". "}
             My work focuses heavily on low-level firmware engineering, embedded systems, and hardware-software integration.
           </p>
           <p>
             On campus, I build autonomy frameworks for the{" "}
-            <Link href="https://qadt.ca" target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
+            <Link href="https://qadt.ca" 
+              target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground 
+              underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
+              transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
               Queen's Aerospace Design Team (QADT)
             </Link>{" "}
             where I implement ROS2 nodes, Nav2 localization stacks, SLAM mapping, and PX4 flight controls for autonomous UAVs. 
@@ -45,18 +61,27 @@ export function AboutBox() {
           </p>
           <p>
             Previously, I was at{" "}
-            <Link href="https://visualsonics.com" target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
+            <Link href="https://visualsonics.com" 
+              target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground 
+              underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
+              transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
               FUJIFILM VisualSonics
             </Link>{", "}
             where I engineered automated testing frameworks and developed core features for large-scale biomedical software systems using C, C++, C#, WinAPI, ATL, and COM objects.
           </p>
           <p>
             Right now, I am focusing heavily on embedded systems and hardware interaction. I am currently working on an RTOS based weather dashboard with custom peripheral drivers (I2C/SPI/UART){" "}
-            <Link href="https://github.com" target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
+            <Link href="https://github.com" 
+              target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground 
+              underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
+              transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
               freertos-can-telematics
-            </Link>{ " " }
+            </Link>{" "}
             and a CUDA-OpenGL fractal generator that acts as a GPU vs. CPU benchmark{" "}
-            <Link href="https://github.com" target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
+            <Link href="https://github.com" 
+              target="_blank" className="font-mono text-xs sm:text-sm inline-flex items-center text-foreground 
+              underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-primary hover:text-primary 
+              transition-colors bg-muted px-1 py-0.5 mx-0.5 rounded-none">
               cuda-opengl-fractals
             </Link>.
           </p>

@@ -51,7 +51,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                 <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-lg border-2 border-border overflow-hidden bg-white flex-shrink-0">
                   <Image
                     src={experience.logo}
-                    alt={experience.company}
+                    alt={`Clarke Needles - ${experience.position} at ${experience.company}`}
                     fill
                     sizes="(min-width: 640px) 64px, 48px"
                     className="object-cover"

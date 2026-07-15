@@ -19,14 +19,6 @@ import { featuredSkills } from "@/config/skills"
 import { cn } from "@/lib/utils"
 import profileImg from "@/public/profile-img.png"
 
-export const metadata: Metadata = {
-  title: `${pagesConfig.home.metadata.title}`,
-  description: "Computer Engineer focused on firmware, embedded systems, and robotics, with a passion for building reliable, low-level systems.",
-  alternates: {
-    canonical: siteConfig.url,
-  },
-}
-
 export default function IndexPage() {
   // Structured data for personal portfolio
   const personSchema = {
@@ -34,27 +26,27 @@ export default function IndexPage() {
     "@type": "Person",
     name: siteConfig.authorName,
     url: siteConfig.url,
-    image: siteConfig.ogImage,
-    jobTitle: "Computer Engineering Student",
+    image: `${siteConfig.url}${siteConfig.ogImage}`, // Forms an absolute URL path for validation
+    jobTitle: "Firmware Designer & Computer Engineering Student",
     description:
       "Computer engineer focused on embedded systems, firmware, robotics, and full-stack development.",
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      "name": "Queen's University"
+    },
+    worksFor: {
+      "@type": "Organization",
+      "name": "Semtech"
+    },
+    // Bridging your engineering identity directly to your high-ranking sports footprints
     sameAs: [
       siteConfig.links.github,
       siteConfig.links.linkedin,
+      "https://gogaelsgo.com/sports/baseball/roster/clarke-needles/15093",
+      "https://www.perfectgame.org/Players/Playerprofile.aspx?ID=1139749",
+      "https://www.prepbaseballreport.com/profiles/ON/Clarke-Needles-5981703264",
+      "https://www.fieldlevel.com/app/profile/clarke.needles/baseball"
     ].filter(Boolean),
-  }
-
-  // Structured data for website as a software application
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: siteConfig.name,
-    url: siteConfig.url,
-    description: metadata.description,
-    author: {
-      "@type": "Person",
-      name: siteConfig.authorName,
-    },
   }
 
   return (
@@ -65,12 +57,6 @@ export default function IndexPage() {
           __html: JSON.stringify(personSchema),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema),
-        }}
-      />
       <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
           <Image
@@ -79,7 +65,7 @@ export default function IndexPage() {
             width={100}
             sizes="100vw"
             className="bg-secondary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary"
-            alt="Clarke Needles - Computer Engineer Portfolio"
+            alt="Clarke Needles - Computer Engineering Student and Varsity Baseball Player at Queen's University"
             priority
           />
           <AnimatedText
